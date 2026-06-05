@@ -274,13 +274,12 @@ body {
   background: transparent;
 }
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 50%),
-    linear-gradient(to bottom, transparent 75%, var(--cream) 100%);
-  pointer-events: none;
-  z-index: 1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(255 255 255) 0% 0%, #936f2f5e 50% 50%), 
+                linear-gradient(to bottom, #00000000 75%, var(--cream) 100%);
+    pointer-events: none;
+    z-index: 1;
 }
 .hero-video {
   position: absolute;
@@ -301,19 +300,7 @@ body {
   pointer-events: none;
 }
 .hero-content { text-align: center; z-index: 2; max-width: 800px; position: relative; }
-.hero-eyebrow {
-  display: inline-block;
-  font-size: 0.55rem;
-  font-weight: 500;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.25rem;
-  padding: 0.35rem 1rem;
-  border-radius: var(--radius-pill);
-  background: rgba(196,149,42,0.08);
-  border: 1px solid rgba(196,149,42,0.2);
-}
+
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
@@ -339,25 +326,30 @@ body {
   line-height: 1.6;
   text-shadow: 0 1px 16px rgba(0,0,0,0.3);
 }
+
+p.hero-sub {
+    filter: drop-shadow(2px 4px 13px black);
+}
+
 .hero-bullets {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem 1.25rem;
   margin-bottom: 2rem;
-  max-width: 600px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 .hero-bullet {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: rgba(232,213,176,0.9);
   display: flex;
   align-items: center;
   gap: 0.35rem;
   text-shadow: 0 1px 8px rgba(0,0,0,0.25);
 }
-.hero-bullet::before { content: "✓"; color: var(--gold); font-weight: 700; }
+.hero-bullet::before { content: "✓"; color: white; font-weight: 1000; }
 .hero-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
 .hero-scroll {
   position: absolute;
@@ -832,7 +824,6 @@ body {
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <span class="hero-eyebrow">✦ Protocolo Exclusivo Drs da Beleza</span>
      <h1 class="hero-title">
       DESINCHE,<br class="br-mobile"> MODELE O CORPO E<br>
       <span class="hero-highlight">ELIMINE RETENÇÃO</span><br>
