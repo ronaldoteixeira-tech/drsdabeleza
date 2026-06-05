@@ -312,10 +312,43 @@ body {
   text-shadow: 0 2px 24px rgba(0,0,0,0.35), 0 1px 4px rgba(0,0,0,0.5);
 }
 .hero-subline {
-  display: block;
+  /* display: block; */
   font-size: clamp(1.4rem, 3vw, 3.6rem);
 }
-.hero-highlight { color: var(--gold); }
+.hero-subline.sub-three {
+    font-size: 2.9rem;
+  }
+
+.hero-highlight {
+  /* background-image: linear-gradient(45deg, var(--gold), var(--gold-dark), var(--gold-light)); */
+  /* background-image: linear-gradient(45deg, #a67c1e, #d4af37, #f3e5ab, #d4af37, #a67c1e); */
+  top: 27%;
+  left: 4vw;
+  color: var(--gold-dark);
+  font-size: 6.7rem; 
+  font-family: 'Dancing Script';
+  position: absolute;
+  z-index: 5;
+  transform: rotateZ(-0deg);
+  filter: drop-shadow(1px 2px 11px rgb(0, 0, 0))
+  /* background-image: linear-gradient(
+    135deg, 
+    #ffe699 0%, 
+    #ffffff 25%,
+    #d4af37 50%,
+    #ffffff 75%,
+    #b8860b 100% 
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #ffffff00;
+  display: inline-block;
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: bold; */
+}
 .hero-sub {
   font-family: var(--font-serif);
   font-size: clamp(1rem, 1.8vw, 1.35rem);
@@ -816,7 +849,7 @@ p.hero-sub {
 
 <!-- ======================== HERO ======================== -->
 <header class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="">
+  <video class="hero-video" autoplay="" muted="" loop="" playsinline="" poster="">
     <source src="LP/videos/video-hero.mp4" type="video/mp4" media="(min-width: 769px)">
     <source src="LP/videos/video-hero-mobile.mp4" type="video/mp4">
   </video>
@@ -825,9 +858,14 @@ p.hero-sub {
 
   <div class="hero-content">
      <h1 class="hero-title">
-      DESINCHE,<br class="br-mobile"> MODELE O CORPO E<br>
-      <span class="hero-highlight">ELIMINE RETENÇÃO</span><br>
-      <span class="hero-subline">JÁ NA PRIMEIRA SESSÃO</span>
+      <span class="hero-subline sub-one" style="font-size:6.9rem;">DESINCHE,</span>
+    <br>
+
+  <span class="hero-subline sub-two">MODELE O CORPO &</span>
+  <br>
+      <span class="hero-highlight">Elimine Retenção</span>
+  <br>
+      <span class="hero-subline sub-three">JÁ NA PRIMEIRA SESSÃO</span>
     </h1>
     <p class="hero-sub">
       Mais que uma drenagem comum: conheça o <strong>Divine Sculpt Detox</strong>, o protocolo exclusivo da Drs da Beleza no <strong>Tatuapé</strong>.
@@ -948,10 +986,10 @@ p.hero-sub {
       </div>
       <div class="ba-slider">
         <img src="LP/imagens/antes-depois/1.png" alt="Antes" style="width: 100%; height: auto; display: block;">
-        <div class="ba-after">
+        <div class="ba-after" style="clip-path: inset(96% 0px 0px);">
           <img src="LP/imagens/antes-depois/2.png" alt="Depois" style="width: 100%; height: auto; display: block;">
         </div>
-        <div class="ba-handle">
+        <div class="ba-handle" style="bottom: 4%;">
           <span class="ba-handle-line"></span>
           <span class="ba-handle-arrows">⋮</span>
         </div>
@@ -986,51 +1024,51 @@ p.hero-sub {
       <div class="gallery-track">
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-1.jpg" alt="Antes e Depois 1" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-2.jpg" alt="Antes e Depois 2" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-3.jpg" alt="Antes e Depois 3" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-4.jpg" alt="Antes e Depois 4" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-5.jpg" alt="Antes e Depois 5" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-6.jpg" alt="Antes e Depois 6" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-1.jpg" alt="Antes e Depois 1" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-2.jpg" alt="Antes e Depois 2" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-3.jpg" alt="Antes e Depois 3" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-4.jpg" alt="Antes e Depois 4" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-5.jpg" alt="Antes e Depois 5" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-6.jpg" alt="Antes e Depois 6" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
       </div>
     </div>
@@ -1070,7 +1108,7 @@ p.hero-sub {
     </div>
 
     <div class="grid-3">
-      <div class="testimonial-card reveal reveal-d1">
+      <div class="testimonial-card reveal reveal-d1" style="animation-play-state: paused;">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"A drenagem da Drs da Beleza mudou minha relação com o corpo. Perdi 3cm na barriga em apenas 4 sessões. O atendimento é maravilhoso, me sinto acolhida e cuidada."</p>
         <div class="testimonial-author">
@@ -1081,7 +1119,7 @@ p.hero-sub {
           </div>
         </div>
       </div>
-      <div class="testimonial-card reveal reveal-d2">
+      <div class="testimonial-card reveal reveal-d2" style="animation-play-state: paused;">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"Fiz o protocolo completo e o resultado superou minhas expectativas. Já na primeira sessão senti meu corpo mais leve. Ambiente lindo e equipe incrível! Recomendo de olhos fechados."</p>
         <div class="testimonial-author">
@@ -1092,7 +1130,7 @@ p.hero-sub {
           </div>
         </div>
       </div>
-      <div class="testimonial-card reveal reveal-d3">
+      <div class="testimonial-card reveal reveal-d3" style="animation-play-state: paused;">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"Sempre tive dificuldade com retenção de líquido. O protocolo personalizado da Drs da Beleza fez toda a diferença. Resultado perceptível já na primeira sessão. Super recomendo!"</p>
         <div class="testimonial-author">
@@ -1118,7 +1156,7 @@ p.hero-sub {
       <h2 class="section-title">Conheça nossos planos exclusivos</h2>
     </div>
     <div class="grid-3" style="align-items: start;">
-      <div class="plano-card reveal reveal-d1">
+      <div class="plano-card reveal reveal-d1" style="animation-play-state: paused;">
         <div class="plano-nome">Plano Prata</div>
         <div class="plano-indicado">Ideal para: desinchar e melhorar retenção líquida.</div>
         <ul class="plano-lista">
@@ -1133,7 +1171,7 @@ p.hero-sub {
         <a href="#contato" class="btn btn-primary btn-block" style="margin-top: 0.5rem;" onclick="selectPlano(0)">Quero este plano</a>
       </div>
 
-      <div class="plano-card reveal reveal-d2">
+      <div class="plano-card reveal reveal-d2" style="animation-play-state: paused;">
         <div class="plano-nome">Plano Ouro</div>
         <div class="plano-indicado">Ideal para: potencializar o detox e a modelagem corporal.</div>
         <ul class="plano-lista">
@@ -1150,7 +1188,7 @@ p.hero-sub {
         <a href="#contato" class="btn btn-primary btn-block" style="margin-top: 0.5rem;" onclick="selectPlano(1)">Quero este plano</a>
       </div>
 
-      <div class="plano-card destaque reveal reveal-d3">
+      <div class="plano-card destaque reveal reveal-d3" style="animation-play-state: paused;">
         <div class="plano-badge">✦ Mais escolhido</div>
         <div class="plano-nome" style="font-size: 1.1rem; color: var(--gold-dark);">Divine Sculpt 3K</div>
         <div style="font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--brown-dark); line-height: 1.2;">
@@ -1381,5 +1419,6 @@ function selectPlano(index) {
   if (sel) sel.value = String(index);
 }
 </script>
+
 </body>
 </html>
