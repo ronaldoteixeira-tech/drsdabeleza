@@ -7,7 +7,7 @@
 <meta name="description" content="Protocolo exclusivo de drenagem linfática no Tatuapé. Desinche, modele o corpo e elimine retenção já na primeira sessão. Resultados reais.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
   --cream: #FAF6EF;
@@ -274,13 +274,12 @@ body {
   background: transparent;
 }
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to top, rgba(0,0,0,1) 0%, transparent 50%),
-    linear-gradient(to bottom, transparent 75%, var(--cream) 100%);
-  pointer-events: none;
-  z-index: 1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgb(255 255 255) 0% 0%, #936f2f5e 35% 50%), 
+                linear-gradient(to bottom, #00000000 75%, var(--cream) 100%);
+    pointer-events: none;
+    z-index: 1;
 }
 .hero-video {
   position: absolute;
@@ -289,7 +288,6 @@ body {
   object-fit: cover;
   object-position: center;
   z-index: 0;
-  opacity: 0.8;
 }
 .hero-fade {
   position: fixed;
@@ -301,20 +299,8 @@ body {
   z-index: 0;
   pointer-events: none;
 }
-.hero-content { text-align: center; z-index: 2; max-width: 800px; position: relative;}
-.hero-eyebrow {
-  display: inline-block;
-  font-size: 0.55rem;
-  font-weight: 500;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.25rem;
-  padding: 0.35rem 1rem;
-  border-radius: var(--radius-pill);
-  background: rgba(196,149,42,0.08);
-  border: 1px solid rgba(196,149,42,0.2);
-}
+.hero-content { text-align: center; z-index: 2; max-width: 800px; position: relative; }
+
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
@@ -326,10 +312,31 @@ body {
   text-shadow: 0 2px 24px rgba(0,0,0,0.35), 0 1px 4px rgba(0,0,0,0.5);
 }
 .hero-subline {
-  display: block;
+  /* display: block; */
   font-size: clamp(1.4rem, 3vw, 3.6rem);
 }
-.hero-highlight { color: var(--gold); }
+
+.hero-subline.sub-one {
+    font-size: 6.9rem;
+  }
+
+.hero-subline.sub-three {
+    font-size: 2.9rem;
+  }
+
+.hero-highlight {
+  top: 30%;
+  left: 3vw;
+  color: var(--gold-light);
+  font-size: 5.5rem; 
+  font-family: "Bebas Neue";
+  /* position: absolute; */
+  z-index: 5;
+  /* transform: rotateZ(-1deg); */
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.6));
+  text-shadow: 0 0 30px rgba(232, 197, 71, 0.3);
+  letter-spacing: 0.01em;
+}
 .hero-sub {
   font-family: var(--font-serif);
   font-size: clamp(1rem, 1.8vw, 1.35rem);
@@ -340,25 +347,31 @@ body {
   line-height: 1.6;
   text-shadow: 0 1px 16px rgba(0,0,0,0.3);
 }
+
+p.hero-sub {
+    filter: drop-shadow(2px 4px 13px black);
+}
+
 .hero-bullets {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem 1.25rem;
   margin-bottom: 2rem;
-  max-width: 600px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 .hero-bullet {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: rgba(232,213,176,0.9);
   display: flex;
   align-items: center;
   gap: 0.35rem;
   text-shadow: 0 1px 8px rgba(0,0,0,0.25);
+  filter: drop-shadow(1px 2px 5px black)
 }
-.hero-bullet::before { content: "✓"; color: var(--gold); font-weight: 700; }
+.hero-bullet::before { content: "✓"; color: white; font-weight: 1000; }
 .hero-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
 .hero-scroll {
   position: absolute;
@@ -774,6 +787,15 @@ body {
     border-radius: var(--radius-xl);
     margin: 0 -0.5rem;
   }
+  .hero-subline.sub-one {
+    font-size: 3.9rem;
+  }
+  .hero-subline.sub-three {
+    font-size: 1.5rem;
+  }
+  .hero-highlight {
+    font-size: 2.9rem;
+  }
   .hero-title { text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 4px 40px rgba(0,0,0,0.4); }
   .section { padding: 3rem 0; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
@@ -816,8 +838,6 @@ body {
   <div class="top-nav-links">
     <a href="#diferente">O Protocolo</a>
     <a href="#sobre">A Clínica</a>
-    <a href="/levieen/">Lavieen</a>
-    <a href="/crio/">Gordura Localizada</a>
     <a href="#beneficios">Resultados</a>
     <a href="#planos">Planos</a>
     <a href="#localizacao">Localização</a>
@@ -827,7 +847,7 @@ body {
 
 <!-- ======================== HERO ======================== -->
 <header class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="">
+  <video class="hero-video" autoplay="" muted="" loop="" playsinline="" poster="">
     <source src="LP/videos/video-hero.mp4" type="video/mp4" media="(min-width: 769px)">
     <source src="LP/videos/video-hero-mobile.mp4" type="video/mp4">
   </video>
@@ -835,11 +855,15 @@ body {
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <span class="hero-eyebrow">✦ Protocolo Exclusivo Drs da Beleza</span>
      <h1 class="hero-title">
-      DESINCHE,<br class="br-mobile"> MODELE O CORPO E<br>
-      <span class="hero-highlight">ELIMINE RETENÇÃO</span><br>
-      <span class="hero-subline">JÁ NA PRIMEIRA SESSÃO</span>
+      <span class="hero-subline sub-one">DESINCHE,</span>
+    <br>
+
+  <span class="hero-subline sub-two">MODELE O CORPO &</span>
+  <br>
+      <span class="hero-highlight">Elimine Retenção</span>
+  <br>
+      <span class="hero-subline sub-three">JÁ NA PRIMEIRA SESSÃO</span>
     </h1>
     <p class="hero-sub">
       Mais que uma drenagem comum: conheça o <strong>Divine Sculpt Detox</strong>, o protocolo exclusivo da Drs da Beleza no <strong>Tatuapé</strong>.
@@ -960,10 +984,10 @@ body {
       </div>
       <div class="ba-slider">
         <img src="LP/imagens/antes-depois/1.png" alt="Antes" style="width: 100%; height: auto; display: block;">
-        <div class="ba-after">
+        <div class="ba-after" style="clip-path: inset(96% 0px 0px);">
           <img src="LP/imagens/antes-depois/2.png" alt="Depois" style="width: 100%; height: auto; display: block;">
         </div>
-        <div class="ba-handle">
+        <div class="ba-handle" style="bottom: 4%;">
           <span class="ba-handle-line"></span>
           <span class="ba-handle-arrows">⋮</span>
         </div>
@@ -998,51 +1022,51 @@ body {
       <div class="gallery-track">
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-1.jpg" alt="Antes e Depois 1" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-2.jpg" alt="Antes e Depois 2" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-3.jpg" alt="Antes e Depois 3" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-4.jpg" alt="Antes e Depois 4" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-5.jpg" alt="Antes e Depois 5" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-6.jpg" alt="Antes e Depois 6" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-1.jpg" alt="Antes e Depois 1" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-2.jpg" alt="Antes e Depois 2" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-3.jpg" alt="Antes e Depois 3" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-4.jpg" alt="Antes e Depois 4" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-5.jpg" alt="Antes e Depois 5" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
         <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
           <img src="LP/imagens/antes-depois/antes-depois-6.jpg" alt="Antes e Depois 6" loading="lazy">
-          <div class="gallery-overlay">Antes & Depois</div>
+          <div class="gallery-overlay">Antes &amp; Depois</div>
         </div>
       </div>
     </div>
@@ -1082,7 +1106,7 @@ body {
     </div>
 
     <div class="grid-3">
-      <div class="testimonial-card reveal reveal-d1">
+      <div class="testimonial-card reveal reveal-d1" style="animation-play-state: paused;">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"A drenagem da Drs da Beleza mudou minha relação com o corpo. Perdi 3cm na barriga em apenas 4 sessões. O atendimento é maravilhoso, me sinto acolhida e cuidada."</p>
         <div class="testimonial-author">
@@ -1093,7 +1117,7 @@ body {
           </div>
         </div>
       </div>
-      <div class="testimonial-card reveal reveal-d2">
+      <div class="testimonial-card reveal reveal-d2" style="animation-play-state: paused;">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"Fiz o protocolo completo e o resultado superou minhas expectativas. Já na primeira sessão senti meu corpo mais leve. Ambiente lindo e equipe incrível! Recomendo de olhos fechados."</p>
         <div class="testimonial-author">
@@ -1104,7 +1128,7 @@ body {
           </div>
         </div>
       </div>
-      <div class="testimonial-card reveal reveal-d3">
+      <div class="testimonial-card reveal reveal-d3" style="animation-play-state: paused;">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"Sempre tive dificuldade com retenção de líquido. O protocolo personalizado da Drs da Beleza fez toda a diferença. Resultado perceptível já na primeira sessão. Super recomendo!"</p>
         <div class="testimonial-author">
@@ -1130,7 +1154,7 @@ body {
       <h2 class="section-title">Conheça nossos planos exclusivos</h2>
     </div>
     <div class="grid-3" style="align-items: start;">
-      <div class="plano-card reveal reveal-d1">
+      <div class="plano-card reveal reveal-d1" style="animation-play-state: paused;">
         <div class="plano-nome">Plano Prata</div>
         <div class="plano-indicado">Ideal para: desinchar e melhorar retenção líquida.</div>
         <ul class="plano-lista">
@@ -1145,7 +1169,7 @@ body {
         <a href="#contato" class="btn btn-primary btn-block" style="margin-top: 0.5rem;" onclick="selectPlano(0)">Quero este plano</a>
       </div>
 
-      <div class="plano-card reveal reveal-d2">
+      <div class="plano-card reveal reveal-d2" style="animation-play-state: paused;">
         <div class="plano-nome">Plano Ouro</div>
         <div class="plano-indicado">Ideal para: potencializar o detox e a modelagem corporal.</div>
         <ul class="plano-lista">
@@ -1162,7 +1186,7 @@ body {
         <a href="#contato" class="btn btn-primary btn-block" style="margin-top: 0.5rem;" onclick="selectPlano(1)">Quero este plano</a>
       </div>
 
-      <div class="plano-card destaque reveal reveal-d3">
+      <div class="plano-card destaque reveal reveal-d3" style="animation-play-state: paused;">
         <div class="plano-badge">✦ Mais escolhido</div>
         <div class="plano-nome" style="font-size: 1.1rem; color: var(--gold-dark);">Divine Sculpt 3K</div>
         <div style="font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--brown-dark); line-height: 1.2;">
@@ -1393,5 +1417,6 @@ function selectPlano(index) {
   if (sel) sel.value = String(index);
 }
 </script>
+
 </body>
 </html>
