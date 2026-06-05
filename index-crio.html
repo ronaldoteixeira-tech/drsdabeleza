@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gordura Localizada — Drs da Beleza | Tatuapé</title>
+<meta name="description" content="Elimine a gordura localizada com Criolipólise, Divine Sculpt e protocolos combinados na Drs da Beleza no Tatuapé. Avaliação gratuita.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FAF6EF;
+  --cream-light: #FDFAF5;
+  --sand: #E8D5B0;
+  --sand-dark: #D4BA8C;
+  --beige: #C8A87C;
+  --gold: #C4952A;
+  --gold-light: #D4AA45;
+  --gold-dark: #8B6520;
+  --bronze: #9A7B50;
+  --brown: #5C3D1E;
+  --brown-dark: #3D2B1A;
+  --espresso: #1E1208;
+  --white: #FFFFFF;
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Dancing Script', cursive;
+  --font-body: 'Poppins', 'Segoe UI', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 50px;
+  --shadow-sm: 0 1px 3px rgba(61,43,26,0.06);
+  --shadow-md: 0 4px 16px rgba(61,43,26,0.08);
+  --shadow-lg: 0 8px 40px rgba(61,43,26,0.1);
+  --shadow-xl: 0 16px 60px rgba(61,43,26,0.12);
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-base: 0.35s var(--ease-out);
+  --transition-slow: 0.5s var(--ease-out);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--cream-light);
+  color: var(--brown-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 5rem 0; }
+.section-header { margin-bottom: 3rem; }
+.section-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 600;
+  color: var(--brown-dark);
+  line-height: 1.15;
+}
+.section-desc {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--bronze);
+  line-height: 1.75;
+  margin-top: 0.4rem;
+}
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+.top-nav {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-pill);
+  background: rgba(30, 18, 8, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(196, 149, 42, 0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  max-width: calc(100vw - 48px);
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.top-nav::-webkit-scrollbar { display: none; }
+.top-nav-brand {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.top-nav-links { display: flex; gap: 0.1rem; align-items: center; }
+.top-nav a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+  letter-spacing: 0.02em;
+}
+.top-nav a:hover { color: var(--gold); background: rgba(196,149,42,0.1); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  line-height: 1.2;
+}
+.btn-primary { background: var(--gold); color: var(--white); border-color: var(--gold); }
+.btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,149,42,0.3); }
+.btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.3); }
+.btn-outline-light:hover { background: rgba(255,255,255,0.06); border-color: var(--gold); color: var(--gold); }
+.btn-lg { padding: 0.9rem 2.25rem; font-size: 0.875rem; }
+.btn-block { width: 100%; justify-content: center; }
+.btn-whatsapp { background: #25D366; color: var(--white); border-color: #25D366; }
+.btn-whatsapp:hover { background: #1DA851; border-color: #1DA851; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.3); }
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.glass-surface {
+  background: rgba(250, 246, 239, 0.6);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border: 1px solid rgba(196, 149, 42, 0.12);
+  transition: all var(--transition-base);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 6rem 24px 4rem;
+  background: linear-gradient(145deg, var(--espresso) 0%, #2C1A0E 40%, #3D2210 100%);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(196,149,42,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(196,149,42,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-content { text-align: center; z-index: 2; max-width: 800px; position: relative; }
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  background: rgba(196,149,42,0.08);
+  border: 1px solid rgba(196,149,42,0.2);
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.8vw, 3.2rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin-bottom: 0;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+}
+.hero-highlight { color: var(--gold); }
+.hero-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+  color: var(--sand);
+  margin: 1rem auto 1.2rem;
+  max-width: 640px;
+  line-height: 1.6;
+  text-shadow: 0 1px 16px rgba(0,0,0,0.3);
+}
+.hero-bullets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-bullet {
+  font-size: 0.68rem;
+  color: rgba(232,213,176,0.9);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.25);
+}
+.hero-bullet::before { content: "✓"; color: var(--gold); font-weight: 700; }
+.hero-prova {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  font-size: 0.68rem;
+  color: rgba(232,213,176,0.7);
+}
+.hero-prova-stars { color: #FBBC05; font-size: 0.9rem; letter-spacing: 0.1em; }
+.hero-prova-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.15); }
+.hero-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255,255,255,0.2);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: scrollPulse 2.5s ease-in-out infinite;
+  z-index: 2;
+}
+.hero-scroll-arrow { width: 1px; height: 24px; background: linear-gradient(to bottom, rgba(196,149,42,0.5), transparent); }
+
+@keyframes scrollPulse {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.4; }
+  50% { transform: translateX(-50%) translateY(6px); opacity: 0.8; }
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  border: 1px solid rgba(61,43,26,0.07);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+.card:hover { box-shadow: var(--shadow-lg); }
+
+.input-field {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid rgba(61,43,26,0.15);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--brown-dark);
+  background: var(--white);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.input-field:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(196,149,42,0.1); }
+.input-field::placeholder { color: rgba(61,43,26,0.25); }
+
+.dor-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+.dor-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--brown-dark);
+  padding: 0.85rem 1.1rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(61,43,26,0.07);
+}
+.dor-list li::before { content: "☑"; color: var(--gold); font-size: 0.85rem; flex-shrink: 0; }
+
+.solucoes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.solucao-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  border: 1px solid rgba(61,43,26,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all var(--transition-base);
+}
+.solucao-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.solucao-nome {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--brown-dark);
+}
+.solucao-tag {
+  display: inline-block;
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background: rgba(196,149,42,0.1);
+  width: fit-content;
+}
+.solucao-indicado { font-size: 0.65rem; color: var(--bronze); line-height: 1.6; }
+.solucao-items { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+.solucao-items li {
+  font-size: 0.72rem;
+  color: var(--brown-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.solucao-items li::before { content: "✓"; color: var(--gold); font-weight: 700; }
+.solucao-desc { font-size: 0.75rem; color: var(--bronze); line-height: 1.65; }
+.solucao-image {
+  width: 100%;
+  height: 140px;
+  border-radius: var(--radius-lg);
+  background: var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bronze);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; }
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--brown-dark);
+  line-height: 1.5;
+}
+.benefit-item::before { content: "✓"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+.gallery-carousel {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+.gallery-track {
+  display: flex;
+  gap: 0.85rem;
+  width: fit-content;
+  animation: galleryScroll 35s linear infinite;
+}
+.gallery-carousel:hover .gallery-track { animation-play-state: paused; }
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: 260px;
+  aspect-ratio: 4 / 5;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+.gallery-item:hover { transform: scale(1.04); box-shadow: var(--shadow-lg); z-index: 2; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: var(--radius-lg); }
+.gallery-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 0.75rem;
+  background: linear-gradient(to top, rgba(30,18,8,0.85), transparent);
+  color: var(--white);
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+@keyframes galleryScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.prova-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem 1.75rem;
+  border: 1px solid rgba(61,43,26,0.07);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.prova-stars { color: #FBBC05; font-size: 1.2rem; letter-spacing: 0.1em; }
+.prova-rating { font-size: 1.1rem; font-weight: 700; color: var(--brown-dark); }
+.prova-clientes { font-size: 0.68rem; color: var(--bronze); }
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  border: 1px solid rgba(61,43,26,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.testimonial-stars { color: #FBBC05; font-size: 0.8rem; letter-spacing: 0.12em; }
+.testimonial-text { font-size: 0.78rem; color: var(--brown-dark); line-height: 1.75; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 0.75rem; border-top: 1px solid rgba(61,43,26,0.07); padding-top: 0.85rem; }
+.testimonial-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--sand), var(--gold-light)); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--espresso); font-weight: 600; flex-shrink: 0; }
+.testimonial-name { font-size: 0.72rem; font-weight: 600; color: var(--brown-dark); }
+.testimonial-service { font-size: 0.6rem; color: var(--bronze); }
+
+.faq-item {
+  border-bottom: 1px solid rgba(61,43,26,0.07);
+  padding: 1rem 0;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--brown-dark);
+  cursor: pointer;
+  user-select: none;
+}
+.faq-question::after {
+  content: "+";
+  font-size: 1.2rem;
+  color: var(--gold);
+  font-weight: 300;
+  transition: transform var(--transition-fast);
+}
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base), padding var(--transition-base);
+  font-size: 0.75rem;
+  color: var(--bronze);
+  line-height: 1.7;
+}
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding-top: 0.75rem;
+}
+
+.location-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
+.location-map iframe { width: 100%; border-radius: var(--radius-xl); display: block; }
+
+.hero-small {
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--espresso) 0%, #2C1A0E 55%, #3D2210 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-small::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 50%, rgba(196,149,42,0.08) 0%, transparent 50%);
+}
+.hero-small-content { text-align: center; z-index: 1; max-width: 700px; padding: 3rem 24px; }
+
+.site-footer {
+  background: var(--espresso);
+  color: var(--sand);
+  padding: 3rem 24px;
+}
+.footer-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 2rem; }
+.footer-brand { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; color: var(--white); }
+.footer-sub { font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bronze); margin-top: 0.15rem; }
+.footer-rule { border: none; border-top: 1px solid rgba(255,255,255,0.07); margin: 1.25rem 0; }
+.footer-text { font-size: 0.68rem; color: rgba(255,255,255,0.3); line-height: 1.65; }
+.footer-heading { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.9rem; }
+.footer-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+.footer-list li { font-size: 0.7rem; color: rgba(255,255,255,0.38); }
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.92);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2rem;
+}
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 100%; max-height: 90vh; border-radius: var(--radius-lg); object-fit: contain; }
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(30px); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.reveal { animation: revealUp 0.8s var(--ease-out) both; }
+.reveal-d1 { animation-delay: 0.15s; }
+.reveal-d2 { animation-delay: 0.3s; }
+.reveal-d3 { animation-delay: 0.45s; }
+
+@media (max-width: 1024px) {
+  .top-nav { gap: 1rem; padding: 0.6rem 1rem; }
+  .solucoes-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media (max-width: 768px) {
+  .section { padding: 3rem 0; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .solucoes-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-item { width: 220px; }
+  .gallery-overlay { opacity: 1; }
+  .location-wrapper { grid-template-columns: 1fr; }
+  .location-map iframe { height: 260px; }
+  .top-nav { padding: 0.5rem 0.75rem; gap: 0.5rem; }
+  .top-nav-links { display: none; }
+  .site-footer { padding: 2rem 24px; }
+  .prova-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .testimonial-text { font-size: 0.85rem; }
+  .hero-small { min-height: 280px; }
+  .btn-lg { padding: 0.75rem 1.25rem; font-size: 0.78rem; }
+  .hero-prova { flex-wrap: wrap; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .gallery-item { width: 200px; }
+  .benefits-grid { grid-template-columns: 1fr 1fr; }
+  .btn-lg { padding: 0.65rem 1rem; font-size: 0.72rem; white-space: normal; }
+}
+@media (hover: none) {
+  .gallery-overlay { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <span class="top-nav-brand">✦ Drs da Beleza</span>
+  <div class="top-nav-links">
+    <a href="#dor">Você se identifica</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#faq">FAQ</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<!-- ======================== HERO ======================== -->
+<header class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">✦ Gordura Localizada — Drs da Beleza</span>
+    <h1 class="hero-title">
+      Elimine a Gordura Localizada e<br>
+      Volte a Gostar do Que Vê no Espelho<br>
+      <span class="hero-highlight">a partir de 48h</span>
+    </h1>
+    <p class="hero-sub">
+      Tratamentos personalizados para barriga, flancos, culote, costas e braços.
+    </p>
+    <div class="hero-bullets">
+      <span class="hero-bullet">Criolipólise</span>
+      <span class="hero-bullet">Drenagem Divine Sculpt</span>
+      <span class="hero-bullet">Protocolos Combinados</span>
+      <span class="hero-bullet">Avaliação Gratuita</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#contato" class="btn btn-primary btn-lg">QUERO MINHA AVALIAÇÃO</a>
+      <a href="#dor" class="btn btn-outline-light">Entenda o tratamento</a>
+    </div>
+    <div class="hero-prova">
+      <span class="hero-prova-stars">★★★★★</span>
+      <span><strong>130</strong> avaliações no Google</span>
+      <span class="hero-prova-sep"></span>
+      <span>Mais de <strong>19 anos</strong> de experiência</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Rolar</span>
+    <div class="hero-scroll-arrow"></div>
+  </div>
+</header>
+
+<!-- ======================== DOR ======================== -->
+<section class="section" id="dor" style="background: var(--cream);">
+  <div class="wrapper">
+    <div class="section-header" style="text-align: center;">
+      <span class="section-tag">Você se identifica?</span>
+      <h2 class="section-title">Você sente que...</h2>
+    </div>
+    <div style="max-width: 600px; margin: 0 auto;">
+      <ul class="dor-list">
+        <li>A barriga não diminui mesmo fazendo dieta?</li>
+        <li>O culote continua aparecendo?</li>
+        <li>A roupa aperta em regiões específicas?</li>
+        <li>Você emagrece mas aquela gordura continua?</li>
+        <li>Tem vergonha de usar determinadas roupas?</li>
+      </ul>
+    </div>
+    <div style="max-width: 580px; margin: 1.5rem auto 0; text-align: center;">
+      <p style="font-size: 0.82rem; color: var(--bronze); line-height: 1.7;">
+        <strong>Nem toda gordura localizada responde da mesma forma.</strong><br>
+        Por isso não existe um tratamento igual para todos.<br>
+        Na <strong>Drs da Beleza</strong> cada paciente recebe uma avaliação personalizada.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== DIFERENCIAL ======================== -->
+<section class="section">
+  <div class="wrapper">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <div class="section-header" style="text-align: center;">
+        <span class="section-tag">Nosso Diferencial</span>
+        <h2 class="section-title">Não acreditamos em tratamentos padronizados</h2>
+        <p class="section-desc" style="margin: 0.6rem auto 0; max-width: 580px;">
+          Muitas clínicas tentam resolver tudo com um único aparelho. Aqui fazemos diferente.
+        </p>
+      </div>
+      <div class="card" style="padding: 2.5rem;">
+        <p style="font-size: 0.85rem; color: var(--bronze); line-height: 1.8; margin-bottom: 1.5rem;">
+          Após sua <strong>avaliação</strong> identificamos:
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--brown-dark);"><span style="color: var(--gold);">✦</span> Tipo de gordura</div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--brown-dark);"><span style="color: var(--gold);">✦</span> Região do corpo</div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--brown-dark);"><span style="color: var(--gold);">✦</span> Flacidez associada</div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--brown-dark);"><span style="color: var(--gold);">✦</span> Retenção de líquidos</div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--brown-dark); grid-column: 1 / -1;"><span style="color: var(--gold);">✦</span> Objetivo estético</div>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--brown-dark); line-height: 1.7; margin-top: 1.5rem; font-weight: 500;">
+          E então montamos o protocolo ideal para você.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== SOLUÇÕES ======================== -->
+<section class="section" id="solucoes" style="background: var(--cream);">
+  <div class="wrapper">
+    <div class="section-header" style="text-align: center;">
+      <span class="section-tag">Nossas Soluções</span>
+      <h2 class="section-title">Conheça as soluções<br>para gordura localizada</h2>
+    </div>
+    <div class="solucoes-grid">
+      <div class="solucao-card reveal reveal-d1">
+        <span class="solucao-tag">Tecnologia</span>
+        <div class="solucao-nome">Criolipólise</div>
+        <div class="solucao-indicado">Ideal para gordura resistente</div>
+        <ul class="solucao-items">
+          <li>Barriga</li>
+          <li>Flancos</li>
+          <li>Costas</li>
+          <li>Culote</li>
+        </ul>
+        <div class="solucao-image">➕ Imagem Criolipólise</div>
+        <p class="solucao-desc">
+          A Criolipólise utiliza o <strong>resfriamento controlado</strong> para atingir células de gordura localizada, eliminando-as de forma natural.
+        </p>
+      </div>
+      <div class="solucao-card reveal reveal-d2">
+        <span class="solucao-tag">Protocolo Exclusivo</span>
+        <div class="solucao-nome">Divine Sculpt</div>
+        <div class="solucao-indicado">Ideal para inchaço e retenção</div>
+        <ul class="solucao-items">
+          <li>Redução de medidas</li>
+          <li>Desinchaço</li>
+          <li>Desintoxicação</li>
+          <li>Modelagem</li>
+        </ul>
+        <div class="solucao-image">➕ Imagem Divine Sculpt</div>
+        <p class="solucao-desc">
+          Nosso protocolo exclusivo combina <strong>drenagem especializada</strong> com técnicas complementares para potencializar resultados.
+        </p>
+      </div>
+      <div class="solucao-card reveal reveal-d3">
+        <span class="solucao-tag">Personalizado</span>
+        <div class="solucao-nome">Protocolos Combinados</div>
+        <div class="solucao-indicado">Máximo resultado</div>
+        <ul class="solucao-items">
+          <li>Criolipólise + Divine Sculpt</li>
+          <li>Tratamento sob medida</li>
+          <li>Mais regiões por sessão</li>
+          <li>Resultados acelerados</li>
+        </ul>
+        <div class="solucao-image">➕ Imagem Combinado</div>
+        <p class="solucao-desc">
+          Muitas pacientes obtêm <strong>melhores resultados</strong> combinando técnicas. A avaliação define o tratamento mais indicado.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== AUTORIDADE ======================== -->
+<section class="section">
+  <div class="wrapper">
+    <div class="section-header" style="text-align: center;">
+      <span class="section-tag">Por que escolher a Drs da Beleza</span>
+      <h2 class="section-title">Experiência e Personalização</h2>
+    </div>
+    <div style="max-width: 640px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+        <div class="glass-surface" style="border-radius: var(--radius-lg); padding: 1.25rem; text-align: center;">
+          <div style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">19</div>
+          <div style="font-size: 0.65rem; color: var(--bronze);">Anos de experiência</div>
+        </div>
+        <div class="glass-surface" style="border-radius: var(--radius-lg); padding: 1.25rem; text-align: center;">
+          <div style="font-size: 1.1rem; font-weight: 600; color: var(--gold);">Europa</div>
+          <div style="font-size: 0.65rem; color: var(--bronze);">Métodos trazidos</div>
+        </div>
+        <div class="glass-surface" style="border-radius: var(--radius-lg); padding: 1.25rem; text-align: center;">
+          <div style="font-size: 1.1rem; font-weight: 600; color: var(--gold);">✦</div>
+          <div style="font-size: 0.65rem; color: var(--bronze);">Atendimento individualizado</div>
+        </div>
+        <div class="glass-surface" style="border-radius: var(--radius-lg); padding: 1.25rem; text-align: center;">
+          <div style="font-size: 1.1rem; font-weight: 600; color: var(--gold);">✓</div>
+          <div style="font-size: 0.65rem; color: var(--bronze);">Avaliação completa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== ANTES E DEPOIS ======================== -->
+<section class="section" id="resultados" style="background: var(--cream);">
+  <div class="wrapper">
+    <div class="section-header" style="text-align: center;">
+      <span class="section-tag">Resultados reais</span>
+      <h2 class="section-title">Antes e Depois</h2>
+      <p class="section-desc">Resultados de barriga, flancos e culote com protocolos Drs da Beleza.</p>
+    </div>
+    <div class="gallery-carousel">
+      <div class="gallery-track">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-1.jpg" alt="Antes e Depois 1" loading="lazy"><div class="gallery-overlay">Barriga</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-2.jpg" alt="Antes e Depois 2" loading="lazy"><div class="gallery-overlay">Flancos</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-3.jpg" alt="Antes e Depois 3" loading="lazy"><div class="gallery-overlay">Culote</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-4.jpg" alt="Antes e Depois 4" loading="lazy"><div class="gallery-overlay">Barriga</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-5.jpg" alt="Antes e Depois 5" loading="lazy"><div class="gallery-overlay">Flancos</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-6.jpg" alt="Antes e Depois 6" loading="lazy"><div class="gallery-overlay">Culote</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-1.jpg" alt="Antes e Depois 1" loading="lazy"><div class="gallery-overlay">Barriga</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-2.jpg" alt="Antes e Depois 2" loading="lazy"><div class="gallery-overlay">Flancos</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-3.jpg" alt="Antes e Depois 3" loading="lazy"><div class="gallery-overlay">Culote</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-4.jpg" alt="Antes e Depois 4" loading="lazy"><div class="gallery-overlay">Barriga</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-5.jpg" alt="Antes e Depois 5" loading="lazy"><div class="gallery-overlay">Flancos</div></div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"><img src="LP/imagens/antes-depois/antes-depois-6.jpg" alt="Antes e Depois 6" loading="lazy"><div class="gallery-overlay">Culote</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== DEPOIMENTOS ======================== -->
+<section class="section">
+  <div class="wrapper">
+    <div class="section-header" style="text-align: center;">
+      <span class="section-tag">Prova Social</span>
+      <h2 class="section-title">O que nossas clientes dizem</h2>
+    </div>
+    <div class="prova-header">
+      <div class="prova-google">
+        <span class="prova-stars">★★★★★</span>
+        <span class="prova-rating">5.0</span>
+      </div>
+      <div class="prova-clientes">
+        ⭐ Avaliação no Google — de <strong>130+</strong> clientes satisfeitos no Tatuapé
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="testimonial-card reveal reveal-d1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Fiz Criolipólise na barriga e o resultado superou minhas expectativas. Perdi medidas que nenhuma dieta conseguia. Equipe maravilhosa!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">ML</div>
+          <div>
+            <div class="testimonial-name">Mariana L.</div>
+            <div class="testimonial-service">Criolipólise + Divine Sculpt</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Sempre tive gordura localizada no culote. Com o protocolo combinado da Drs da Beleza finalmente consegui resultados que nunca tive antes. Super recomendo!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FP</div>
+          <div>
+            <div class="testimonial-name">Fernanda P.</div>
+            <div class="testimonial-service">Protocolo Combinado</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-d3">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"A avaliação personalizada fez toda diferença. Descobri que precisava de mais que um tratamento. Resultado incrível e equipe super acolhedora!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RS</div>
+          <div>
+            <div class="testimonial-name">Roberta S.</div>
+            <div class="testimonial-service">Avaliação + Protocolo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== FAQ ======================== -->
+<section class="section" id="faq" style="background: var(--cream);">
+  <div class="wrapper">
+    <div class="section-header" style="text-align: center;">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Dúvidas Frequentes</h2>
+    </div>
+    <div style="max-width: 640px; margin: 0 auto;">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Criolipólise dói?</div>
+        <div class="faq-answer">O procedimento é bem tolerado pela maioria dos pacientes. Durante a sessão você pode sentir frio intenso e leve formigamento, mas são sensações passageiras e controladas.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Quantas sessões são necessárias?</div>
+        <div class="faq-answer">Depende da avaliação e da região tratada. Após a avaliação inicial indicamos o número ideal de sessões para alcançar seu objetivo.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Posso associar Criolipólise com drenagem?</div>
+        <div class="faq-answer">Sim. Em muitos casos os protocolos combinados são recomendados para potencializar os resultados, tratando gordura localizada e retenção de líquidos simultaneamente.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Como saber qual tratamento é ideal para mim?</div>
+        <div class="faq-answer">Através da avaliação realizada na clínica. Analisamos seu tipo de gordura, região, flacidez e objetivos para montar o protocolo personalizado.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">Como eliminar gordura abdominal sem cirurgia?</div>
+        <div class="faq-answer">A Criolipólise associada ao Divine Sculpt é uma das soluções mais eficazes para redução de medidas na barriga sem procedimentos invasivos. O protocolo é definido na avaliação.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== LOCALIZAÇÃO ======================== -->
+<section class="section" id="localizacao">
+  <div class="wrapper">
+    <div class="section-header">
+      <span class="section-tag">Onde estamos</span>
+      <h2 class="section-title">Localização</h2>
+    </div>
+    <div class="location-wrapper">
+      <div class="location-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.331069966988!2d-46.5604624!3d-23.5565502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5b5ab03539f%3A0x1e8ecb8cfb8bd833!2sDrs%20da%20Beleza%20Est%C3%A9tica%20%26%20Spa!5e0!3m2!1spt-BR!2sbr!4v1780598299382!5m2!1spt-BR!2sbr" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="glass-surface" style="border-radius: var(--radius-xl); padding: 1.75rem;">
+        <div style="font-family: var(--font-serif); font-size: 1rem; font-weight: 600; color: var(--brown-dark); margin-bottom: 0.75rem;">
+          Drs da Beleza Estética &amp; Spa
+        </div>
+        <div style="font-size: 0.78rem; color: var(--bronze); line-height: 1.7; margin-bottom: 1rem;">
+          Rua do Contorno, 123 — Sala 45<br>
+          Tatuapé, São Paulo — SP<br>
+          CEP 03333-000
+        </div>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.35rem;">
+          <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Seg–Sex: 09h — 20h</li>
+          <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Sábado: 09h — 14h</li>
+          <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Estacionamento gratuito</li>
+          <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Próximo ao metrô Tatuapé</li>
+        </ul>
+        <a href="https://wa.me/5511999999999" class="btn btn-primary btn-block" style="margin-top: 1rem;" target="_blank" rel="noopener">Como chegar — Fale conosco</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== CTA FINAL ======================== -->
+<section class="hero-small" id="contato">
+  <div class="hero-small-content">
+    <span class="tag tag-cream" style="margin-bottom: 1rem;">Avaliação Gratuita</span>
+    <h2 class="section-title" style="color: var(--white); font-size: clamp(1.5rem, 2.8vw, 2.2rem);">
+      Seu tratamento começa<br>
+      com uma <span style="color: var(--gold);">avaliação</span>
+    </h2>
+    <p style="font-size: 0.82rem; color: rgba(232,213,176,0.7); line-height: 1.7; margin-top: 0.75rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+      Descubra qual protocolo é mais indicado para o seu caso.
+    </p>
+    <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+      <a href="#" class="btn btn-primary btn-lg">AGENDAR AVALIAÇÃO GRATUITA</a>
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Drs da Beleza</div>
+      <div class="footer-sub">Estética &amp; Spa — Tatuapé</div>
+      <hr class="footer-rule">
+      <p class="footer-text">Transformando corpos e elevando autoestimas com excelência, tecnologia e acolhimento. Protocolos exclusivos no coração do Tatuapé.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Serviços</div>
+      <ul class="footer-list">
+        <li>Criolipólise</li>
+        <li>Divine Sculpt</li>
+        <li>Protocolos Combinados</li>
+        <li>Redução de Medidas</li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Horários</div>
+      <ul class="footer-list">
+        <li>Seg–Sex: 09h — 20h</li>
+        <li>Sábado: 09h — 14h</li>
+        <li>Rua do Contorno, 123 — Sala 45</li>
+        <li>Tatuapé, São Paulo — SP</li>
+      </ul>
+      <hr class="footer-rule">
+      <p class="footer-text">© 2025 Drs da Beleza. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+  <img id="lightbox-img" src="" alt="Ampliada">
+</div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    var t = document.querySelector(this.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('active');
+}
+
+function toggleFaq(el) {
+  el.parentElement.classList.toggle('active');
+}
+
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.style.animationPlayState = 'running'; }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(function(el) {
+  el.style.animationPlayState = 'paused';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
