@@ -677,83 +677,72 @@ p.hero-sub {
 .location-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; }
 .location-map iframe { width: 100%; border-radius: var(--radius-xl); display: block; }
 
-/* ===================== BEFORE/AFTER SLIDER ===================== */
-.ba-slider {
+/* ===================== VIDEO PLAYER ===================== */
+.video-player {
   position: relative;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  user-select: none;
-  -webkit-user-select: none;
-  cursor: ns-resize;
+  background: var(--brown-dark);
+  aspect-ratio: 9 / 16;
+  max-height: 560px;
+  cursor: pointer;
 }
-.ba-slider img { display: block; width: 100%; height: auto; }
-.ba-after {
+.video-player video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-placeholder {
   position: absolute;
   inset: 0;
-  clip-path: inset(100% 0 0 0);
-  transition: none;
-}
-.ba-handle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 32px;
-  z-index: 10;
-  cursor: ns-resize;
-  touch-action: none;
-}
-.ba-handle-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 2px;
-  background: var(--white);
-  transform: translateY(-50%);
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
-}
-.ba-handle-arrows {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--white);
-  color: var(--brown-dark);
-  width: 36px;
-  height: 28px;
-  border-radius: var(--radius-md);
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 700;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, rgba(30,18,8,0.7) 0%, rgba(60,40,20,0.5) 100%);
+  transition: opacity 0.5s ease;
 }
-.ba-dragging { user-select: none; -webkit-user-select: none; }
-.ba-labels {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.75rem;
+.video-placeholder.is-hidden {
+  opacity: 0;
   pointer-events: none;
-  z-index: 5;
 }
-.ba-label {
-  font-size: 0.55rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-pill);
-  background: rgba(30,18,8,0.65);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  color: var(--white);
+.video-play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.video-player:hover .video-play-btn {
+  transform: scale(1.08);
+  background: rgba(255,255,255,0.3);
+}
+.video-play-btn svg {
+  width: 48px;
+  height: 48px;
+  fill: var(--white);
+  margin-left: 4px;
+}
+@media (min-width: 769px) {
+  .grid-2 .video-player {
+    margin-left: 3rem;
+  }
+  #identificacao .section-header {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .grid-2 .video-player {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
+  }
 }
 
 /* ===================== LIGHTBOX ===================== */
@@ -960,7 +949,7 @@ p.hero-sub {
 </section>
 
 <!-- ======================== BLOCO 3 — DOR / IDENTIFICAÇÃO ======================== -->
-<section class="section" style="background: var(--cream);">
+<section class="section" id="identificacao" style="background: var(--cream);">
   <div class="wrapper">
     <div class="section-header">
       <span class="section-tag">Você se identifica?</span>
@@ -982,19 +971,15 @@ p.hero-sub {
           </p>
         </div>
       </div>
-      <div class="ba-slider">
-        <img src="LP/imagens/antes-depois/1.png" alt="Antes" style="width: 100%; height: auto; display: block;">
-        <div class="ba-after" style="clip-path: inset(96% 0px 0px);">
-          <img src="LP/imagens/antes-depois/2.png" alt="Depois" style="width: 100%; height: auto; display: block;">
+      <div class="video-player" role="button" tabindex="0" aria-label="Assistir vídeo">
+        <div class="video-placeholder">
+          <div class="video-play-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
         </div>
-        <div class="ba-handle" style="bottom: 4%;">
-          <span class="ba-handle-line"></span>
-          <span class="ba-handle-arrows">⋮</span>
-        </div>
-        <div class="ba-labels">
-          <span class="ba-label ba-label-before">Antes</span>
-          <span class="ba-label ba-label-after">Depois</span>
-        </div>
+        <video class="video-element" preload="none" playsinline muted loop poster="LP/imagens/capa-drenagem.png" data-src="LP/videos/drenagem.mp4"></video>
       </div>
     </div>
   </div>
@@ -1367,49 +1352,38 @@ document.querySelectorAll('.reveal').forEach(function(el) {
   observer.observe(el);
 });
 
-/* Before/After Slider */
+/* Video Player — Lazy Load */
 (function() {
-  var slider = document.querySelector('.ba-slider');
-  if (!slider) return;
-  var after = slider.querySelector('.ba-after');
-  var handle = slider.querySelector('.ba-handle');
-  var isDragging = false;
+  var players = document.querySelectorAll('.video-player');
+  players.forEach(function(player) {
+    var placeholder = player.querySelector('.video-placeholder');
+    var video = player.querySelector('.video-element');
+    var src = video.getAttribute('data-src');
+    var loaded = false;
 
-  function setPosition(y) {
-    var rect = slider.getBoundingClientRect();
-    var pct = 1 - Math.max(0, Math.min(1, (y - rect.top) / rect.height));
-    pct = Math.round(pct * 100);
-    after.style.clipPath = 'inset(' + (100 - pct) + '% 0 0 0)';
-    handle.style.bottom = pct + '%';
-  }
+    function toggle() {
+      if (video.paused) {
+        if (!loaded) {
+          video.src = src;
+          loaded = true;
+        }
+        video.play().then(function() {
+          placeholder.classList.add('is-hidden');
+        }).catch(function() {});
+      } else {
+        video.pause();
+        placeholder.classList.remove('is-hidden');
+      }
+    }
 
-  function onDown(e) {
-    isDragging = true;
-    slider.classList.add('ba-dragging');
-    var y = e.type === 'touchstart' ? e.touches[0].clientY : e.clientY;
-    setPosition(y);
-  }
-
-  function onMove(e) {
-    if (!isDragging) return;
-    e.preventDefault();
-    var y = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
-    setPosition(y);
-  }
-
-  function onUp() {
-    isDragging = false;
-    slider.classList.remove('ba-dragging');
-  }
-
-  handle.addEventListener('mousedown', onDown);
-  handle.addEventListener('touchstart', onDown, { passive: true });
-  document.addEventListener('mousemove', onMove);
-  document.addEventListener('mouseup', onUp);
-  document.addEventListener('touchmove', onMove, { passive: false });
-  document.addEventListener('touchend', onUp);
-
-  setPosition(slider.getBoundingClientRect().bottom - 16);
+    player.addEventListener('click', toggle);
+    player.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
 })();
 
 function selectPlano(index) {
