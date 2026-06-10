@@ -305,30 +305,7 @@ body {
   margin: 1.25rem 0 1.6rem;
   max-width: 640px;
   line-height: 1.6;
-  text-shadow: 0 0 20px rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.4);
 }
-.hero-bullets {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 0.55rem;
-  max-width: 680px;
-  margin: 0 0 1.6rem;
-}
-.hero-bullet {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.92);
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.48rem 0.72rem;
-  border: 1px solid rgba(232,213,176,0.18);
-  border-radius: var(--radius-pill);
-  background: rgba(30,18,8,0.34);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-.hero-bullet::before { content: "✓"; color: var(--gold-light); font-weight: 700; }
 .hero-actions { display: flex; gap: 0.75rem; justify-content: flex-start; flex-wrap: wrap; }
 .hero-scroll {
   position: absolute;
@@ -759,8 +736,8 @@ body {
   .diferencial-copy .card { text-align: center; }
   .video-frame { max-width: 360px; }
   .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
-  .hero-bullet { font-size: 0.72rem; padding: 0.42rem 0.62rem; }
-  .hero { padding: 5.5rem 18px 3.5rem; background-image: url('imagens/hero-banner-mobile.png'); }
+  .hero { padding: calc(5.5rem + 200px) 18px 3.5rem; background-image: url('imagens/hero-banner-mobile.png'); }
+  .hero-sub { color: #3D2B1A; }
   .hero-highlight { font-size: clamp(3.2rem, 15vw, 5rem); }
   .hero-preline { font-size: clamp(1.2rem, 6vw, 1.75rem); }
   .hero-actions .btn { width: 100%; justify-content: center; }
@@ -771,7 +748,6 @@ body {
 @media (max-width: 480px) {
   .benefits-grid { grid-template-columns: 1fr; }
   .btn-lg { padding: 0.65rem 1rem; font-size: 0.72rem; white-space: normal; }
-  .hero-bullet { font-size: 0.7rem; }
   .gallery-item { width: 200px; }
 }
 @media (hover: none) {
@@ -805,13 +781,6 @@ body {
     <p class="hero-sub">
       Manchas, melasma, poros aparentes, marcas de acne, envelhecimento da pele e enfraquecimento capilar podem ser tratados através de <strong>protocolos personalizados com Lavieen</strong> na Drs da Beleza, no Tatuapé.
     </p>
-    <div class="hero-bullets">
-      <span class="hero-bullet">Protocolo personalizado</span>
-      <span class="hero-bullet">Método europeu</span>
-      <span class="hero-bullet">Pele e cabelos</span>
-      <span class="hero-bullet">Resultados progressivos</span>
-      <span class="hero-bullet">Avaliação individualizada</span>
-    </div>
     <div class="hero-actions">
       <a href="#contato" class="btn btn-primary btn-lg">QUERO FAZER MINHA AVALIAÇÃO</a>
       <a href="#identificacao" class="btn btn-outline-light">Entenda o tratamento</a>
@@ -904,7 +873,7 @@ body {
 </section>
 
 <!-- ======================== DIFERENCIAL ======================== -->
-<section class="section" id="diferencial" style="background: var(--cream-light);">
+<section class="section" id="diferencial">
   <div class="wrapper">
     <div class="diferencial-wrap">
       <div class="diferencial-copy">
@@ -937,7 +906,7 @@ body {
 </section>
 
 <!-- ======================== SOBRE ======================== -->
-<section class="section" id="sobre" style="background: var(--cream-light);">
+<section class="section" id="sobre">
   <div class="wrapper">
     <div class="section-header">
       <span class="section-tag">Sobre a Drs da Beleza</span>
@@ -984,7 +953,7 @@ body {
 </section>
 
 <!-- ======================== BENEFÍCIOS ======================== -->
-<section class="section" id="beneficios" style="background: var(--cream-light);">
+<section class="section" id="beneficios">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Por que o Lavieen?</span>
@@ -1008,7 +977,7 @@ body {
 </section>
 
 <!-- ======================== ANTES E DEPOIS ======================== -->
-<section class="section" id="antes-depois" style="background: var(--cream-light);">
+<section class="section" id="antes-depois">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Resultados reais</span>
