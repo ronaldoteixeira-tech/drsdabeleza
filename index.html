@@ -256,6 +256,23 @@ body {
   50% { transform: translateX(-50%) translateY(6px); opacity: 0.8; }
 }
 
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+.btn-pulse-green {
+  background: #25D366;
+  color: var(--white);
+  border-color: #25D366;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+.btn-pulse-green:hover {
+  background: #1DA851;
+  border-color: #1DA851;
+  animation-play-state: paused;
+}
+
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes revealUp {
   from { opacity: 0; transform: translateY(30px); filter: blur(4px); }
@@ -1130,7 +1147,7 @@ p.hero-sub {
       </div>
     </div>
     <div style="text-align: center; margin-top: 2rem;">
-      <a href="#contato" class="btn btn-primary">Quero viver essa experiência</a>
+      <a href="#contato" class="btn btn-pulse-green">Quero viver essa experiência</a>
     </div>
   </div>
 </section>
