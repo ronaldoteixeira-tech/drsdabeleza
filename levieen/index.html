@@ -149,8 +149,57 @@ body {
 .btn-outline-light:hover { background: rgba(255,255,255,0.06); border-color: var(--gold); color: var(--gold); }
 .btn-lg { padding: 0.9rem 2.25rem; font-size: 0.875rem; }
 .btn-block { width: 100%; justify-content: center; }
-.btn-whatsapp { background: #25D366; color: var(--white); border-color: #25D366; }
-.btn-whatsapp:hover { background: #1DA851; border-color: #1DA851; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.3); }
+.btn-whatsapp {
+  border-radius: 5px;
+  border: none;
+  border-top: 2px solid #6EE7B7;
+  background: linear-gradient(90deg, #25D366 0%, #4ADE80 50%, #1DA851 100%);
+  box-shadow:
+    0 10px 20px 0 rgba(37, 211, 102, 0.4),
+    0 20px 40px 0 rgba(37, 211, 102, 0.3),
+    0 40px 80px 0 rgba(37, 211, 102, 0.2),
+    0 60px 120px 0 rgba(37, 211, 102, 0.1);
+  outline: none;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.btn-whatsapp:hover {
+  background: linear-gradient(90deg, #1DA851 0%, #34D974 50%, #15963D 100%);
+  transform: translateY(-8px);
+  box-shadow:
+    0 12px 30px rgba(37, 211, 102, 0.4),
+    0 30px 60px rgba(37, 211, 102, 0.3),
+    0 50px 100px rgba(37, 211, 102, 0.2);
+}
+.btn-whatsapp::before {
+  content: '';
+  background: linear-gradient(10deg, rgba(255, 255, 255, 0.8) 12.81%, rgba(255, 255, 255, 0) 66.66%);
+  width: 70px;
+  height: 130%;
+  position: absolute;
+  transform: translateX(-50%) skew(-25deg);
+  bottom: 0;
+  user-select: none;
+  pointer-events: none;
+  animation: shinery 3s infinite ease-in-out;
+  filter: blur(4px);
+}
+.btn-whatsapp::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(74, 222, 128, 0.9) 20%, rgba(74, 222, 128, 0.4) 70%, rgba(74, 222, 128, 0) 100%);
+  mix-blend-mode: screen;
+  filter: blur(12px);
+  pointer-events: none;
+  z-index: 1;
+}
 
 .tag {
   display: inline-block;
@@ -189,7 +238,7 @@ body {
   position: relative;
   z-index: 1;
   padding: 6rem max(24px, calc((100vw - 1140px) / 2)) 4rem;
-  background: linear-gradient(145deg, var(--espresso) 0%, #2C1A0E 40%, #3D2210 100%);
+  background: url('imagens/hero-banner.png') center center / cover no-repeat;
   overflow: hidden;
 }
 .hero::before {
@@ -215,7 +264,7 @@ body {
   font-weight: 500;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--white);
   margin-bottom: 1.25rem;
   padding: 0.35rem 1rem;
   border-radius: var(--radius-pill);
@@ -228,12 +277,12 @@ body {
   line-height: 0.9;
   margin-bottom: 0.8rem;
   text-transform: uppercase;
-  text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.404), 0 4px 24px rgba(0,0,0,0.20);
 }
 .hero-preline {
   display: block;
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 2.7vw, 2.6rem);
+  font-size: clamp(1.0rem, 2.7vw, 2.2rem);
   font-weight: 500;
   line-height: 1.05;
   color: var(--white);
@@ -244,7 +293,7 @@ body {
   font-family: var(--font-display);
   font-weight: 400;
   color: var(--gold-light);
-  font-size: clamp(3.6rem, 9vw, 8rem);
+  font-size: clamp(3.6rem, 9vw, 7rem);
   line-height: 0.9;
   margin-top: 0.3rem;
 }
@@ -252,11 +301,11 @@ body {
   font-family: var(--font-serif);
   font-size: clamp(0.95rem, 1.6vw, 1.25rem);
   font-weight: 400;
-  color: var(--sand);
+  color: var(--white);
   margin: 1.25rem 0 1.6rem;
   max-width: 640px;
   line-height: 1.6;
-  text-shadow: 0 1px 16px rgba(0,0,0,0.3);
+  text-shadow: 0 0 20px rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.4);
 }
 .hero-bullets {
   display: flex;
@@ -302,6 +351,13 @@ body {
 @keyframes scrollPulse {
   0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.4; }
   50% { transform: translateX(-50%) translateY(6px); opacity: 0.8; }
+}
+
+@keyframes shinery {
+  0%, 100% { left: -10%; opacity: 0; }
+  20% { opacity: 1; }
+  48% { left: 110%; opacity: 1; }
+  51% { opacity: 0; }
 }
 
 /* ===================== CARD ===================== */
@@ -498,6 +554,53 @@ body {
 .reveal-d2 { animation-delay: 0.3s; }
 .reveal-d3 { animation-delay: 0.45s; }
 
+/* ===================== GALERIA ===================== */
+.gallery-carousel {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+.gallery-track {
+  display: flex;
+  gap: 0.85rem;
+  width: fit-content;
+  animation: galleryScroll 30s linear infinite;
+}
+.gallery-carousel:hover .gallery-track {
+  animation-play-state: paused;
+}
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: 260px;
+  aspect-ratio: 366 / 599;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+.gallery-item:hover { transform: scale(1.04); box-shadow: var(--shadow-lg); z-index: 2; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: var(--radius-lg); transition: transform var(--transition-slow); }
+.gallery-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(30,18,8,0.85), transparent);
+  color: var(--white);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+@keyframes galleryScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* ===================== LIGHTBOX ===================== */
 .lightbox {
   display: none;
@@ -512,6 +615,125 @@ body {
 }
 .lightbox.active { display: flex; }
 .lightbox img { max-width: 100%; max-height: 90vh; border-radius: var(--radius-lg); object-fit: contain; }
+
+/* ===================== DIFERENCIAL GRID ===================== */
+.diferencial-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+.diferencial-copy .section-header {
+  margin-bottom: 1.75rem;
+}
+.diferencial-copy .card {
+  text-align: left;
+}
+
+/* ===================== VIDEO PLAYER ===================== */
+.video-frame {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 360px);
+}
+.video-frame::before {
+  content: '';
+  position: absolute;
+  inset: 7% -10% -6%;
+  background: radial-gradient(circle, rgba(196,149,42,0.2), transparent 68%);
+  filter: blur(16px);
+  z-index: 0;
+  pointer-events: none;
+}
+.video-frame .video-player {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: var(--espresso);
+  box-shadow: 0 28px 70px rgba(61,43,26,0.18);
+  border: 1px solid rgba(196,149,42,0.16);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: pointer;
+}
+.video-frame .video-player video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--espresso);
+}
+.video-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(30,18,8,0.7) 0%, rgba(60,40,20,0.5) 100%);
+  transition: opacity 0.5s ease;
+}
+.video-placeholder.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.video-play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.video-player:hover .video-play-btn {
+  transform: scale(1.08);
+  background: rgba(255,255,255,0.3);
+}
+.video-play-btn svg {
+  width: 48px;
+  height: 48px;
+  fill: var(--white);
+  margin-left: 4px;
+}
+.video-caption {
+  position: relative;
+  z-index: 1;
+  margin: 1rem auto 0;
+  max-width: 340px;
+  color: var(--bronze);
+  font-size: 0.72rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ===================== PARALLAX BG ===================== */
+.bg-parallax {
+  position: relative;
+  z-index: 1;
+  background: url('imagens/bg-sec2.png') center center / cover no-repeat fixed;
+}
+.bg-parallax::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(250, 246, 239, 0.65);
+  pointer-events: none;
+  z-index: 0;
+}
+.bg-parallax > .wrapper {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .bg-parallax {
+    background-image: url('imagens/bg-sec2-mobile.png');
+  }
+}
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 1024px) {
@@ -533,17 +755,27 @@ body {
   .location-map iframe { height: 260px; }
   .hero-small { min-height: 280px; }
   .btn-lg { padding: 0.75rem 1.25rem; font-size: 0.78rem; }
+  .diferencial-wrap { grid-template-columns: 1fr; }
+  .diferencial-copy .card { text-align: center; }
+  .video-frame { max-width: 360px; }
   .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
   .hero-bullet { font-size: 0.72rem; padding: 0.42rem 0.62rem; }
-  .hero { padding: 5.5rem 18px 3.5rem; }
+  .hero { padding: 5.5rem 18px 3.5rem; background-image: url('imagens/hero-banner-mobile.png'); }
   .hero-highlight { font-size: clamp(3.2rem, 15vw, 5rem); }
   .hero-preline { font-size: clamp(1.2rem, 6vw, 1.75rem); }
   .hero-actions .btn { width: 100%; justify-content: center; }
+}
+@media (max-width: 768px) {
+  .gallery-item { width: 220px; }
 }
 @media (max-width: 480px) {
   .benefits-grid { grid-template-columns: 1fr; }
   .btn-lg { padding: 0.65rem 1rem; font-size: 0.72rem; white-space: normal; }
   .hero-bullet { font-size: 0.7rem; }
+  .gallery-item { width: 200px; }
+}
+@media (hover: none) {
+  .gallery-overlay { opacity: 1; }
 }
 </style>
 </head>
@@ -552,8 +784,6 @@ body {
 <nav class="top-nav">
   <span class="top-nav-brand">✦ Drs da Beleza</span>
   <div class="top-nav-links">
-    <a href="/">Divine Sculpt</a>
-    <a href="/crio/">Gordura Localizada</a>
     <a href="#identificacao">O que tratamos</a>
     <a href="#sobre">A Clínica</a>
     <a href="#resultados">Resultados</a>
@@ -594,7 +824,7 @@ body {
 </header>
 
 <!-- ======================== IDENTIFICAÇÃO ======================== -->
-<section class="section" id="identificacao" style="background: var(--cream);">
+<section class="section bg-parallax" id="identificacao">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Você se identifica?</span>
@@ -629,7 +859,7 @@ body {
 </section>
 
 <!-- ======================== VERSATILIDADE ======================== -->
-<section class="section">
+<section class="section bg-parallax">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Tecnologia Versátil</span>
@@ -642,7 +872,7 @@ body {
 </section>
 
 <!-- ======================== RESULTADOS ======================== -->
-<section class="section" id="resultados" style="background: var(--cream);">
+<section class="section bg-parallax" id="resultados">
   <div class="wrapper">
     <div class="section-header">
       <span class="section-tag">Resultados reais</span>
@@ -674,25 +904,40 @@ body {
 </section>
 
 <!-- ======================== DIFERENCIAL ======================== -->
-<section class="section">
+<section class="section" id="diferencial" style="background: var(--cream-light);">
   <div class="wrapper">
-    <div style="max-width: 720px; margin: 0 auto;">
-      <div class="section-header" style="text-align: center;">
-        <span class="section-tag">Diferencial Drs da Beleza</span>
-        <h2 class="section-title">Nem toda pele precisa do mesmo tratamento.<br>Nem todo cabelo precisa da mesma estratégia.</h2>
+    <div class="diferencial-wrap">
+      <div class="diferencial-copy">
+        <div class="section-header">
+          <span class="section-tag">Diferencial Drs da Beleza</span>
+          <h2 class="section-title">Nem toda pele precisa do mesmo tratamento.<br>Nem todo cabelo precisa da mesma estratégia.</h2>
+        </div>
+        <div class="card" style="padding: 2.5rem;">
+          <p style="font-size: 0.88rem; color: var(--brown-dark); line-height: 1.8;">
+            Na <strong>Drs da Beleza</strong>, cada paciente passa por uma <strong>avaliação individualizada</strong>.<br><br>
+            O objetivo não é simplesmente realizar um procedimento, mas entender quais são suas <strong>queixas, expectativas e necessidades</strong> para construir um protocolo adequado ao seu caso.
+          </p>
+        </div>
       </div>
-      <div class="card" style="text-align: center; padding: 2.5rem;">
-        <p style="font-size: 0.88rem; color: var(--brown-dark); line-height: 1.8;">
-          Na <strong>Drs da Beleza</strong>, cada paciente passa por uma <strong>avaliação individualizada</strong>.<br><br>
-          O objetivo não é simplesmente realizar um procedimento, mas entender quais são suas <strong>queixas, expectativas e necessidades</strong> para construir um protocolo adequado ao seu caso.
-        </p>
+      <div class="video-frame">
+        <div class="video-player" role="button" tabindex="0" aria-label="Assistir vídeo">
+          <div class="video-placeholder">
+            <div class="video-play-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+          <video class="video-element" preload="none" playsinline loop poster="imagens/capa-video.png" data-src="video/levieen-video.mp4"></video>
+        </div>
+        <p class="video-caption">Conheça o protocolo Lavieen personalizado e entenda como ele transforma a pele e os cabelos.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ======================== SOBRE ======================== -->
-<section class="section" id="sobre">
+<section class="section" id="sobre" style="background: var(--cream-light);">
   <div class="wrapper">
     <div class="section-header">
       <span class="section-tag">Sobre a Drs da Beleza</span>
@@ -739,7 +984,7 @@ body {
 </section>
 
 <!-- ======================== BENEFÍCIOS ======================== -->
-<section class="section" style="background: var(--cream);">
+<section class="section" id="beneficios" style="background: var(--cream-light);">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Por que o Lavieen?</span>
@@ -758,13 +1003,12 @@ body {
       <span class="benefit-item">Melhora da textura da pele</span>
       <span class="benefit-item">Fortalecimento capilar</span>
       <span class="benefit-item">Auxílio contra a queda de cabelo</span>
-      <span class="benefit-item">Estímulo ao crescimento saudável dos fios</span>
     </div>
   </div>
 </section>
 
 <!-- ======================== ANTES E DEPOIS ======================== -->
-<section class="section" id="antes-depois">
+<section class="section" id="antes-depois" style="background: var(--cream-light);">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Resultados reais</span>
@@ -773,14 +1017,41 @@ body {
         Resultados faciais e capilares com o protocolo Lavieen personalizado.
       </p>
     </div>
-    <div class="ba-grid">
-      <div class="ba-card">
-        <div class="ba-card-image">Adicionar imagem<br>Resultados Faciais</div>
-        <div class="ba-card-label">Resultados Faciais — Lavieen</div>
-      </div>
-      <div class="ba-card">
-        <div class="ba-card-image">Adicionar imagem<br>Resultados Capilares</div>
-        <div class="ba-card-label">Resultados Capilares — Lavieen</div>
+    <div class="gallery-carousel" style="margin-top: 2rem;">
+      <div class="gallery-track">
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="imagens/antes-e-depois/IMG_8125.JPG.jpeg" alt="Antes e Depois" loading="lazy">
+          <div class="gallery-overlay">Antes &amp; Depois</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="imagens/antes-e-depois/IMG_8126.JPG.jpeg" alt="Antes e Depois" loading="lazy">
+          <div class="gallery-overlay">Antes &amp; Depois</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="imagens/antes-e-depois/IMG_8127.JPG.jpeg" alt="Antes e Depois" loading="lazy">
+          <div class="gallery-overlay">Antes &amp; Depois</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="imagens/antes-e-depois/IMG_8128.JPG.jpeg" alt="Antes e Depois" loading="lazy">
+          <div class="gallery-overlay">Antes &amp; Depois</div>
+        </div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="imagens/antes-e-depois/IMG_8125.JPG.jpeg" alt="Antes e Depois" loading="lazy">
+          <div class="gallery-overlay">Antes &amp; Depois</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="imagens/antes-e-depois/IMG_8126.JPG.jpeg" alt="Antes e Depois" loading="lazy">
+          <div class="gallery-overlay">Antes &amp; Depois</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="imagens/antes-e-depois/IMG_8127.JPG.jpeg" alt="Antes e Depois" loading="lazy">
+          <div class="gallery-overlay">Antes &amp; Depois</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
+          <img src="imagens/antes-e-depois/IMG_8128.JPG.jpeg" alt="Antes e Depois" loading="lazy">
+          <div class="gallery-overlay">Antes &amp; Depois</div>
+        </div>
       </div>
     </div>
   </div>
@@ -883,6 +1154,40 @@ function openLightbox(src) {
   document.getElementById('lightbox').classList.add('active');
 }
 
+/* Video Player — Lazy Load */
+(function() {
+  var players = document.querySelectorAll('.video-player');
+  players.forEach(function(player) {
+    var placeholder = player.querySelector('.video-placeholder');
+    var video = player.querySelector('.video-element');
+    var src = video.getAttribute('data-src');
+    var loaded = false;
+
+    function toggle() {
+      if (video.paused) {
+        if (!loaded) {
+          video.src = src;
+          loaded = true;
+        }
+        video.play().then(function() {
+          placeholder.classList.add('is-hidden');
+        }).catch(function() {});
+      } else {
+        video.pause();
+        placeholder.classList.remove('is-hidden');
+      }
+    }
+
+    player.addEventListener('click', toggle);
+    player.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+})();
+
 var observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
     if (e.isIntersecting) { e.target.style.animationPlayState = 'running'; }
@@ -892,6 +1197,8 @@ document.querySelectorAll('.reveal').forEach(function(el) {
   el.style.animationPlayState = 'paused';
   observer.observe(el);
 });
+
+
 </script>
 </body>
 </html>
