@@ -57,6 +57,16 @@ body {
 .wrapper { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 .section { padding: 5rem 0; }
 
+.section.section-texture {
+  background-color: var(--cream) !important;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(92,61,30,0.16) 1px, transparent 1.4px),
+    linear-gradient(135deg, rgba(196,149,42,0.16) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255,255,255,0.5), rgba(250,246,239,0.82)) !important;
+  background-size: 18px 18px, 34px 34px, auto !important;
+  background-position: 0 0, 0 0, center !important;
+}
+
 .section-header { margin-bottom: 3rem; }
 .section-tag {
   display: inline-block;
@@ -150,8 +160,56 @@ section[id], header[id] { scroll-margin-top: 90px; }
   text-decoration: none;
   line-height: 1.2;
 }
-.btn-primary { background: var(--gold); color: var(--white); border-color: var(--gold); }
-.btn-primary:hover { background: var(--gold-dark); border-color: var(--gold-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,149,42,0.3); }
+.btn-primary {
+  border-radius: 12px;
+  border: none;
+  border-top: 2px solid #F0D78C;
+  background: linear-gradient(90deg, #C4952A 0%, #E0B84A 50%, #9A6F1C 100%);
+  box-shadow:
+    0 6px 16px 0 rgba(196, 149, 42, 0.25),
+    0 14px 30px 0 rgba(196, 149, 42, 0.15),
+    0 24px 50px 0 rgba(196, 149, 42, 0.08);
+  outline: none;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #9A6F1C 0%, #D4AA45 50%, #8B6520 100%);
+  transform: translateY(-6px);
+  box-shadow:
+    0 8px 20px rgba(196, 149, 42, 0.28),
+    0 16px 38px rgba(196, 149, 42, 0.16),
+    0 28px 58px rgba(196, 149, 42, 0.09);
+}
+.btn-primary::before {
+  content: '';
+  background: linear-gradient(10deg, rgba(255, 255, 255, 0.8) 12.81%, rgba(255, 255, 255, 0) 66.66%);
+  width: 70px;
+  height: 130%;
+  position: absolute;
+  transform: translateX(-50%) skew(-25deg);
+  bottom: 0;
+  user-select: none;
+  pointer-events: none;
+  animation: shinery 3s infinite ease-in-out;
+  filter: blur(4px);
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(224, 184, 74, 0.9) 20%, rgba(224, 184, 74, 0.4) 70%, rgba(224, 184, 74, 0) 100%);
+  mix-blend-mode: screen;
+  filter: blur(12px);
+  pointer-events: none;
+  z-index: 1;
+}
 .btn-secondary { background: transparent; color: var(--gold-dark); border-color: var(--gold); }
 .btn-secondary:hover { background: rgba(196,149,42,0.08); border-color: var(--gold-dark); transform: translateY(-2px); }
 .btn-dark { background: var(--espresso); color: var(--white); border-color: var(--espresso); }
@@ -161,8 +219,62 @@ section[id], header[id] { scroll-margin-top: 90px; }
 .btn-lg { padding: 0.9rem 2.25rem; font-size: 0.875rem; }
 .btn-sm { padding: 0.45rem 1.1rem; font-size: 0.68rem; }
 .btn-block { width: 100%; justify-content: center; }
-.btn-whatsapp { background: #25D366; color: var(--white); border-color: #25D366; }
-.btn-whatsapp:hover { background: #1DA851; border-color: #1DA851; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.3); }
+.btn-whatsapp {
+  border-radius: 12px;
+  border: none;
+  border-top: 2px solid #6EE7B7;
+  background: linear-gradient(90deg, #25D366 0%, #4ADE80 50%, #1DA851 100%);
+  box-shadow:
+    0 6px 16px 0 rgba(37, 211, 102, 0.25),
+    0 14px 30px 0 rgba(37, 211, 102, 0.15),
+    0 24px 50px 0 rgba(37, 211, 102, 0.08);
+  outline: none;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.btn-whatsapp:hover {
+  background: linear-gradient(90deg, #1DA851 0%, #34D974 50%, #15963D 100%);
+  transform: translateY(-6px);
+  box-shadow:
+    0 8px 20px rgba(37, 211, 102, 0.28),
+    0 16px 38px rgba(37, 211, 102, 0.16),
+    0 28px 58px rgba(37, 211, 102, 0.09);
+}
+.btn-whatsapp::before {
+  content: '';
+  background: linear-gradient(10deg, rgba(255, 255, 255, 0.8) 12.81%, rgba(255, 255, 255, 0) 66.66%);
+  width: 70px;
+  height: 130%;
+  position: absolute;
+  transform: translateX(-50%) skew(-25deg);
+  bottom: 0;
+  user-select: none;
+  pointer-events: none;
+  animation: shinery 3s infinite ease-in-out;
+  filter: blur(4px);
+}
+.btn-whatsapp::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(74, 222, 128, 0.9) 20%, rgba(74, 222, 128, 0.4) 70%, rgba(74, 222, 128, 0) 100%);
+  mix-blend-mode: screen;
+  filter: blur(12px);
+  pointer-events: none;
+  z-index: 1;
+}
+@keyframes shinery {
+  0%, 100% { left: -10%; opacity: 0; }
+  20% { opacity: 1; }
+  48% { left: 110%; opacity: 1; }
+  51% { opacity: 0; }
+}
 
 .tag {
   display: inline-block;
@@ -1895,7 +2007,7 @@ section[id], header[id] { scroll-margin-top: 90px; }
 </section>
 
 <!-- ======================== BLOCO 3 — DOR / IDENTIFICAÇÃO ======================== -->
-<section class="section" id="identificacao" style="background: var(--cream);">
+<section class="section section-texture" id="identificacao" style="background: var(--cream);">
   <div class="wrapper">
     <div class="identificacao-wrap">
       <div class="identificacao-copy">
@@ -1936,7 +2048,7 @@ section[id], header[id] { scroll-margin-top: 90px; }
 </section>
 
 <!-- ======================== BLOCO 4 — BENEFÍCIOS ======================== -->
-<section class="section" id="beneficios">
+<section class="section section-texture" id="beneficios">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Transformação real</span>
@@ -1960,7 +2072,7 @@ section[id], header[id] { scroll-margin-top: 90px; }
 </section>
 
 <!-- ======================== BLOCO 4.5 — ANTES & DEPOIS ======================== -->
-<section class="section" id="antes-depois" style="background: var(--cream);">
+<section class="section section-texture" id="antes-depois" style="background: var(--cream);">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Resultados reais</span>
@@ -2039,7 +2151,7 @@ section[id], header[id] { scroll-margin-top: 90px; }
 </section>
 
 <!-- ======================== BLOCO 6 — PROVA SOCIAL ======================== -->
-<section class="section" id="depoimentos">
+<section class="section section-texture" id="depoimentos">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Prova Social</span>
@@ -2098,7 +2210,7 @@ section[id], header[id] { scroll-margin-top: 90px; }
 </section>
 
 <!-- ======================== BLOCO 7 — PLANOS ======================== -->
-<section class="section" id="planos" style="background: var(--cream);">
+<section class="section section-texture" id="planos" style="background: var(--cream);">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Nossos Protocolos</span>
@@ -2139,7 +2251,7 @@ section[id], header[id] { scroll-margin-top: 90px; }
 
       <div class="plano-card destaque">
         <div class="plano-badge">✦ Mais escolhido</div>
-        <div class="plano-nome" style="font-size: 1.1rem; color: var(--gold-dark);">Divine Sculpt 3K</div>
+        <div class="plano-nome" style="font-size: 1.1rem; color: var(--gold-dark);">Divine Sculpt Detox — Plano Diamante</div>
         <div style="font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--brown-dark); line-height: 1.2;">
           Desinche até 3kg<br>em 1 sessão*
         </div>
@@ -2155,7 +2267,7 @@ section[id], header[id] { scroll-margin-top: 90px; }
         </ul>
         <div class="plano-preco">
           <div class="plano-valor">R$ 350 <small>avulsa</small></div>
-          <div class="plano-parcela">Ou 6 sessões por 6x de R$ 297,50 no protocolo Divine Sculpt 3k</div>
+          <div class="plano-parcela">Ou 6 sessões por 6x de R$ 297,50 no protocolo Divine Sculpt Detox — Plano Diamante</div>
         </div>
         <a href="#contato" class="btn btn-primary btn-block" style="margin-top: 0.5rem;" onclick="selectPlano(2)">Quero este protocolo</a>
         <div class="plano-obs">*Resultados podem variar de acordo com o organismo.</div>
@@ -2178,13 +2290,11 @@ section[id], header[id] { scroll-margin-top: 90px; }
       <div class="location-card">
         <div class="location-name">Drs da Beleza Estética &amp; Spa</div>
         <div class="location-address">
-          Rua Eleonora Cintra, 468 <br>
-          Jardim Analia Franco, São Paulo — SP<br>
-          CEP 03337-000
+          R. Eleonora Cintra, 468 - Jardim Analia Franco, São Paulo - SP, 03337-000
         </div>
         <p class="location-note"><strong>No Tatuapé,</strong> com acesso prático para quem vem da zona leste, Anália Franco e regiões próximas.</p>
         <ul class="location-list">
-          <li><span>✦</span> Seg–Sex<br>09h — 20h</li>
+          <li><span>✦</span> Seg–Sex<br>08h - 20h</li>
           <li><span>✦</span> Sábado<br>09h — 14h</li>
           <li><span>✦</span> Estacionamento gratuito</li>
           <li><span>✦</span> Próximo ao metrô Tatuapé</li>
@@ -2243,7 +2353,7 @@ section[id], header[id] { scroll-margin-top: 90px; }
             <select class="input-field" id="plano-select">
               <option value="0">Divine Sculpt Detox — Plano Prata</option>
               <option value="1">Divine Sculpt Detox — Plano Ouro</option>
-              <option value="2">Divine Sculpt 3K</option>
+              <option value="2">Divine Sculpt Detox — Plano Diamante</option>
               <option value="3">Não sei — quero uma avaliação</option>
             </select>
           </div>
@@ -2288,10 +2398,9 @@ section[id], header[id] { scroll-margin-top: 90px; }
     <div>
       <div class="footer-heading">Horários</div>
       <ul class="footer-list">
-        <li>Seg–Sex: 09h — 20h</li>
+        <li>Seg–Sex: 08h - 20h</li>
         <li>Sábado: 09h — 14h</li>
-        <li>Rua Eleonora Cintra, 468</li>
-        <li>Jardim Analia Franco, São Paulo — SP</li>
+        <li>R. Eleonora Cintra, 468 - Jardim Analia Franco, São Paulo - SP, 03337-000</li>
       </ul>
       <hr class="footer-rule">
       <p class="footer-text">© 2026 Drs da Beleza. Todos os direitos reservados.</p>
