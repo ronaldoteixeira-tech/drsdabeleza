@@ -56,6 +56,16 @@ body {
 .wrapper { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 .section { padding: 5rem 0; }
 
+.section.section-texture {
+  background-color: var(--cream) !important;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(92,61,30,0.16) 1px, transparent 1.4px),
+    linear-gradient(135deg, rgba(196,149,42,0.16) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255,255,255,0.5), rgba(250,246,239,0.82)) !important;
+  background-size: 18px 18px, 34px 34px, auto !important;
+  background-position: 0 0, 0 0, center !important;
+}
+
 .section-header { margin-bottom: 3rem; }
 .section-tag {
   display: inline-block;
@@ -970,7 +980,7 @@ p.hero-sub {
 </section>
 
 <!-- ======================== BLOCO 3 — DOR / IDENTIFICAÇÃO ======================== -->
-<section class="section" id="identificacao" style="background: var(--cream);">
+<section class="section section-texture" id="identificacao" style="background: var(--cream);">
   <div class="wrapper">
     <div class="section-header">
       <span class="section-tag">Você se identifica?</span>
@@ -1007,7 +1017,7 @@ p.hero-sub {
 </section>
 
 <!-- ======================== BLOCO 4 — BENEFÍCIOS ======================== -->
-<section class="section" id="beneficios">
+<section class="section section-texture" id="beneficios">
   <div class="wrapper">
     <div class="section-header">
       <span class="section-tag">Transformação real</span>
@@ -1094,7 +1104,7 @@ p.hero-sub {
 </section>
 
 <!-- ======================== BLOCO 6 — PROVA SOCIAL ======================== -->
-<section class="section" id="depoimentos">
+<section class="section section-texture" id="depoimentos">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Prova Social</span>
@@ -1153,7 +1163,7 @@ p.hero-sub {
 </section>
 
 <!-- ======================== BLOCO 7 — PLANOS ======================== -->
-<section class="section" id="planos" style="background: var(--cream);">
+<section class="section section-texture" id="planos" style="background: var(--cream);">
   <div class="wrapper">
     <div class="section-header" style="text-align: center;">
       <span class="section-tag">Nossos Protocolos</span>
@@ -1194,7 +1204,7 @@ p.hero-sub {
 
       <div class="plano-card destaque reveal reveal-d3" style="animation-play-state: paused;">
         <div class="plano-badge">✦ Mais escolhido</div>
-        <div class="plano-nome" style="font-size: 1.1rem; color: var(--gold-dark);">Divine Sculpt 3K</div>
+        <div class="plano-nome" style="font-size: 1.1rem; color: var(--gold-dark);">Divine Sculpt Detox — Plano Diamante</div>
         <div style="font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; color: var(--brown-dark); line-height: 1.2;">
           Desinche até 3kg<br>em 1 sessão*
         </div>
@@ -1210,7 +1220,7 @@ p.hero-sub {
         </ul>
         <div class="plano-preco">
           <div class="plano-valor">R$ 350 <small>avulsa</small></div>
-          <div class="plano-parcela">Ou 6 sessões por 6x de R$ 297,50 no protocolo Divine Sculpt 3k</div>
+          <div class="plano-parcela">Ou 6 sessões por 6x de R$ 297,50 no protocolo Divine Sculpt Detox — Plano Diamante</div>
         </div>
         <a href="#contato" class="btn btn-primary btn-block" style="margin-top: 0.5rem;" onclick="selectPlano(2)">Quero este protocolo</a>
         <div class="plano-obs">*Resultados podem variar de acordo com o organismo.</div>
@@ -1235,13 +1245,11 @@ p.hero-sub {
           Drs da Beleza Estética &amp; Spa
         </div>
         <div style="font-size: 0.78rem; color: var(--bronze); line-height: 1.7; margin-bottom: 1rem;">
-          Rua Eleonora Cintra, 468 <br>
-          Jardim Analia Franco, São Paulo — SP<br>
-          CEP 03337-000
+          R. Eleonora Cintra, 468 - Jardim Analia Franco, São Paulo - SP, 03337-000
         </div>
         <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.35rem;">
-          <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Seg–Sex: 08h — 20h</li>
-          <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Sábado: 08h — 14h</li>
+          <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Seg–Sex: 08h - 20h</li>
+          <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Sábado: 09h — 14h</li>
           <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Estacionamento gratuito</li>
           <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span style="color: var(--gold);">✦</span> Próximo ao metrô Tatuapé</li>
         </ul>
@@ -1286,7 +1294,7 @@ p.hero-sub {
             <select class="input-field" id="plano-select">
               <option value="0">Divine Sculpt Detox — Plano Prata</option>
               <option value="1">Divine Sculpt Detox — Plano Ouro</option>
-              <option value="2">Divine Sculpt 3K</option>
+              <option value="2">Divine Sculpt Detox — Plano Diamante</option>
               <option value="3">Não sei — quero uma avaliação</option>
             </select>
           </div>
@@ -1331,10 +1339,9 @@ p.hero-sub {
     <div>
       <div class="footer-heading">Horários</div>
       <ul class="footer-list">
-        <li>Seg–Sex: 08h — 20h</li>
-        <li>Sábado: 08h — 14h</li>
-        <li>Rua Eleonora Cintra, 468</li>
-        <li>Jardim Analia Franco, São Paulo — SP</li>
+        <li>Seg–Sex: 08h - 20h</li>
+        <li>Sábado: 09h — 14h</li>
+        <li>R. Eleonora Cintra, 468 - Jardim Analia Franco, São Paulo - SP, 03337-000</li>
       </ul>
       <hr class="footer-rule">
       <p class="footer-text">© 2026 Drs da Beleza. Todos os direitos reservados.</p>

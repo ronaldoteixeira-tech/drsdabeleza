@@ -569,9 +569,9 @@
     .clinic-gallery {
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
-      grid-template-rows: repeat(2, minmax(190px, 1fr));
+      grid-template-rows: repeat(2, minmax(170px, 1fr));
       gap: 0.8rem;
-      min-height: 460px;
+      min-height: 410px;
       position: relative;
     }
 
@@ -1229,6 +1229,76 @@
       transform: scale(1.05);
     }
 
+    .video-wrap {
+      display: grid;
+      grid-template-columns: 1fr 0.92fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+
+    .video-lead {
+      font-size: 0.95rem;
+      color: var(--brown-dark);
+      line-height: 1.85;
+      max-width: 480px;
+      margin-top: 0.9rem;
+    }
+
+    .video-lead strong {
+      color: var(--brown-dark);
+      font-weight: 600;
+    }
+
+    .video-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      margin: 1.4rem 0 1.7rem;
+    }
+
+    .video-points li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--brown-dark);
+      font-weight: 500;
+    }
+
+    .video-points li svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--gold-dark);
+    }
+
+    .video-frame {
+      position: relative;
+      justify-self: center;
+      width: min(100%, 380px);
+    }
+
+    .video-frame::before {
+      content: '';
+      position: absolute;
+      inset: 4% -10% -8%;
+      background: radial-gradient(circle, rgba(196, 149, 42, 0.25), transparent 70%);
+      filter: blur(22px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .video-frame video {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius-2xl);
+      box-shadow: 0 26px 64px rgba(61, 43, 26, 0.2);
+    }
+
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1773,6 +1843,24 @@
         font-size: 0.95rem;
       }
 
+      .video-wrap {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      .video-copy {
+        text-align: center;
+      }
+
+      .video-lead {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .video-points {
+        align-items: center;
+      }
+
       .testimonial-text {
         font-size: 0.85rem;
       }
@@ -1999,6 +2087,40 @@
     </div>
   </section>
 
+  <!-- ======================== VÍDEO ======================== -->
+  <section class="section section-texture">
+    <div class="wrapper">
+      <div class="video-wrap">
+        <div class="video-copy">
+          <span class="section-tag">Veja na prática</span>
+          <h2 class="section-title">O tratamento na Drs da Beleza</h2>
+          <p class="video-lead">
+            A Criolipólise na nossa clínica é <strong>indolor, segura e confortável</strong>. Em cada sessão você é
+            acompanhada de perto pela nossa equipe, com tecnologia importada e um protocolo pensado para o seu corpo.
+          </p>
+          <ul class="video-points">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M8.5 12.5l2.4 2.4 4.6-5" /></svg>
+              Procedimento confortável e não invasivo
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M8.5 12.5l2.4 2.4 4.6-5" /></svg>
+              Equipe especializada acompanhando você
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M8.5 12.5l2.4 2.4 4.6-5" /></svg>
+              Tecnologia de resfriamento controlado
+            </li>
+          </ul>
+          <a href="#contato" class="btn btn-primary">Quero minha avaliação</a>
+        </div>
+        <div class="video-frame">
+          <video src="videos/IMG_7671.MP4" controls controlslist="nodownload nofullscreen noplaybackrate noremoteplayback" disablepictureinpicture preload="metadata" playsinline></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ======================== SOLUÇÕES ======================== -->
   <section class="section section-texture" id="solucoes">
     <div class="wrapper">
@@ -2134,7 +2256,8 @@
           </ul>
           <div class="sobre-callout">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.8-6 10-6 10z" /><circle cx="12" cy="11" r="2.2" /></svg>
-            <p><strong>Estamos no Tatuapé.</strong>Nossas clientes vêm de todas as regiões de São Paulo e até mesmo de outros estados pelos resultados que entregamos.</p>
+            <p><strong>Estamos no Tatuapé.</strong> Nossas clientes vêm de toda a zona leste, norte e até do centro de
+              São Paulo pelos resultados que entregamos.</p>
           </div>
         </div>
 
@@ -2148,12 +2271,12 @@
             </div>
           </figure>
           <figure class="clinic-photo">
-            <img src="../LP/imagens/clinica/sala.webp" alt="Sala de atendimento da Drs da Beleza" loading="lazy">
-            <figcaption class="clinic-label">Atendimento</figcaption>
+            <img src="../LP/imagens/clinica/recp.png" alt="Recepção da clínica Drs da Beleza" loading="lazy">
+            <figcaption class="clinic-label">Recepção</figcaption>
           </figure>
           <figure class="clinic-photo">
-            <img src="../LP/imagens/clinica/recepcao-2.webp" alt="Ambiente da clínica Drs da Beleza" loading="lazy">
-            <figcaption class="clinic-label">Ambiente</figcaption>
+            <img src="../LP/imagens/clinica/sala.webp" alt="Sala de atendimento da Drs da Beleza" loading="lazy">
+            <figcaption class="clinic-label">Atendimento</figcaption>
           </figure>
         </div>
       </div>
@@ -2306,7 +2429,7 @@
             <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span
                 style="color: var(--gold);">✦</span> Seg–Sex: 08h - 20h</li>
             <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span
-                style="color: var(--gold);">✦</span> Sábado: 08h — 14h</li>
+                style="color: var(--gold);">✦</span> Sábado: 09h — 14h</li>
             <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span
                 style="color: var(--gold);">✦</span> Estacionamento gratuito</li>
             <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; color: var(--bronze);"><span
@@ -2398,7 +2521,7 @@
         <div class="footer-heading">Horários</div>
         <ul class="footer-list">
           <li>Seg–Sex: 08h - 20h</li>
-          <li>Sábado: 08h — 14h</li>
+          <li>Sábado: 09h — 14h</li>
           <li>R. Eleonora Cintra, 468 - Jardim Analia Franco, São Paulo - SP, 03337-000</li>
         </ul>
         <hr class="footer-rule">
