@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la Video/)",
+      "Bash(ls -la video/)",
+      "Bash(grep -n -E \"--gold-light|--gold:|--radius-pill|--radius-2xl|--radius-lg|--font-serif|--bronze\" laser/index.html)",
+      "Bash(sed -n '/^\\\\.btn-success {/,/^}/p' laser/index.html)",
+      "Bash(sed -n '226,250p' laser/index.html)",
+      "Bash(grep -nA4 \"tech-banner-photo img\" laser/index.html)",
+      "Bash(grep -nB1 -A6 \"tech-banner-photo\" laser/index.html)",
+      "Bash(grep -vE \"^--$\")",
+      "Bash(python -c \"from PIL import Image; im=Image.open\\('laser banner mobile.png'\\); print\\(im.size\\)\")",
+      "Bash(powershell -NoProfile -Command 'Add-Type -AssemblyName System.Drawing; $i=[System.Drawing.Image]::FromFile\\('\\\\''C:\\\\Users\\\\Gabriel\\\\Downloads\\\\Drs da Beleza\\\\drsdabeleza\\\\laser\\\\image\\\\laser banner mobile.png'\\\\''\\); Write-Output \\(\"{0}x{1}\" -f $i.Width, $i.Height\\)')",
+      "Bash(powershell -NoProfile -Command 'Add-Type -AssemblyName System.Drawing; $i=New-Object System.Drawing.Bitmap\\('\\\\''C:\\\\Users\\\\Gabriel\\\\Downloads\\\\Drs da Beleza\\\\drsdabeleza\\\\laser\\\\image\\\\laser banner mobile.png'\\\\''\\); $w=$i.Width; $h=$i.Height; foreach\\($p in @\\(@\\(0.5,0.02\\),@\\(0.05,0.05\\),@\\(0.95,0.05\\),@\\(0.5,0.12\\),@\\(0.5,0.22\\),@\\(0.5,0.92\\)\\)\\){ $x=[int]\\($w*$p[0]\\); $y=[int]\\($h*$p[1]\\); if\\($x -ge $w\\){$x=$w-1}; if\\($y -ge $h\\){$y=$h-1}; $c=$i.GetPixel\\($x,$y\\); Write-Output \\(\"y={0}%  #{1:X2}{2:X2}{3:X2}\" -f [int]\\($p[1]*100\\), $c.R, $c.G, $c.B\\) }')"
+    ]
+  }
+}
