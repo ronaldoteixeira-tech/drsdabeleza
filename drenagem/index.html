@@ -2310,7 +2310,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><span>✦</span> Estacionamento gratuito</li>
           <li><span>✦</span> Próximo ao metrô Tatuapé</li>
         </ul>
-        <a href="https://wa.me/5511941492612" class="btn btn-primary btn-block" style="margin-top: 1rem;" target="_blank" rel="noopener">Como chegar — Fale conosco</a>
+        <a href="https://wa.me/5511941492612?text=Ol%C3%A1%2C%20vim%20do%20Google%20e%20gostaria%20de%20detalhes%20sobre%20Drenagem" class="btn btn-primary btn-block" style="margin-top: 1rem;" target="_blank" rel="noopener">Como chegar — Fale conosco</a>
       </div>
     </div>
   </div>
@@ -2346,22 +2346,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </aside>
       <div class="form-main">
         <h3 class="form-main-title">Preencha seus dados e nossa equipe chama você no WhatsApp.</h3>
-        <div class="form-grid">
+        <form action="https://n8n.v4lisboatech.com.br/webhook/drs-da-beleza-drenagem" method="POST" onsubmit="event.preventDefault(); fetch(this.action,{method:'POST',body:new FormData(this)}).finally(function(){window.open('https://wa.me/5511941492612?text=Ol%C3%A1%2C%20vim%20do%20Google%20e%20gostaria%20de%20detalhes%20sobre%20Drenagem','_blank')});"><div class="form-grid">
           <div class="form-field">
             <label>Nome completo</label>
-            <input type="text" class="input-field" placeholder="Ex: Maria Silva">
+            <input type="text" name="nome" class="input-field" placeholder="Ex: Maria Silva" required>
           </div>
           <div class="form-field">
             <label>WhatsApp</label>
-            <input type="tel" class="input-field" placeholder="(11) 99999-9999">
-          </div>
-          <div class="form-field">
-            <label>E-mail</label>
-            <input type="email" class="input-field" placeholder="maria@email.com">
+            <input type="tel" name="whatsapp" class="input-field" placeholder="(11) 99999-9999" required>
           </div>
           <div class="form-field">
             <label>Tratamento de interesse</label>
-            <select class="input-field" id="plano-select">
+            <select name="plano" class="input-field" id="plano-select">
               <option value="0">Divine Sculpt Detox — Plano Prata</option>
               <option value="1">Divine Sculpt Detox — Plano Ouro</option>
               <option value="2">Divine Sculpt Detox — Plano Diamante</option>
@@ -2369,12 +2365,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </select>
           </div>
         </div>
-        <a href="#" class="btn btn-primary btn-lg btn-block" style="margin-top: 1.25rem;">QUERO AGENDAR MINHA AVALIAÇÃO</a>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top: 1.25rem;">QUERO AGENDAR MINHA AVALIAÇÃO</button></form>
         <div class="form-divider">
           <hr>
           <span>ou</span>
         </div>
-        <a href="https://wa.me/5511941492612" class="btn btn-whatsapp btn-lg btn-block" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
+        <a href="https://wa.me/5511941492612?text=Ol%C3%A1%2C%20vim%20do%20Google%20e%20gostaria%20de%20detalhes%20sobre%20Drenagem" class="btn btn-whatsapp btn-lg btn-block" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
         <p class="form-disclaimer">Ao enviar, você aceita receber contato via WhatsApp e e-mail. Seus dados estão protegidos.</p>
       </div>
     </div>
