@@ -837,6 +837,106 @@
       object-fit: cover;
     }
 
+    .spa-carousel-container {
+      position: relative;
+      width: 100%;
+      justify-self: end;
+    }
+
+    .spa-carousel {
+      position: relative;
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      width: min(100%, 360px);
+      aspect-ratio: 3 / 4;
+      max-height: 520px;
+      justify-self: end;
+      background: var(--cream);
+    }
+
+    .spa-carousel img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+
+    .spa-carousel img[data-index="0"] {
+      opacity: 1;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--brown-dark);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all var(--transition-fast);
+      box-shadow: var(--shadow-md);
+    }
+
+    .carousel-btn:hover {
+      background: var(--white);
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .carousel-btn svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .carousel-btn-prev {
+      left: -22px;
+    }
+
+    .carousel-btn-next {
+      right: -22px;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .carousel-dot.active {
+      background: var(--white);
+      width: 28px;
+      border-radius: var(--radius-pill);
+    }
+
+    .carousel-dot:hover {
+      background: rgba(255, 255, 255, 0.8);
+    }
+
     .spa-copy {
       display: grid;
       gap: 1rem;
@@ -1688,6 +1788,42 @@
         aspect-ratio: 3 / 4;
       }
 
+      .spa-carousel {
+        max-height: 420px;
+      }
+
+      .carousel-btn {
+        width: 38px;
+        height: 38px;
+      }
+
+      .carousel-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .carousel-btn-prev {
+        left: -12px;
+      }
+
+      .carousel-btn-next {
+        right: -12px;
+      }
+
+      .carousel-dots {
+        bottom: 0.8rem;
+        gap: 0.4rem;
+      }
+
+      .carousel-dot {
+        width: 8px;
+        height: 8px;
+      }
+
+      .carousel-dot.active {
+        width: 24px;
+      }
+
       .top-nav .nav-cta {
         padding: 0.58rem 0.78rem;
         font-size: 0.62rem;
@@ -1808,11 +1944,6 @@
             <h3>Perto de você</h3>
             <p>No Jardim Analia Franco, região do Tatuapé, ao lado do Parque do Ceret.</p>
           </article>
-          <article class="benefit-card is-wide">
-            <div class="benefit-icon">05</div>
-            <h3>Horários flexíveis</h3>
-            <p>Atendimento de segunda a sexta das 8h às 20h e aos sábados das 8h às 14h, para caber no seu tempo.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -1861,10 +1992,37 @@
 
     <section class="section" id="nosso-spa">
       <div class="wrapper spa-layout">
-        <figure class="spa-photo">
-          <img src="images/imagem%202.jpeg" width="1200" height="1600"
-            alt="Detalhe da sala de SPA da Drs da Beleza com vela, toalha e maca" loading="lazy" decoding="async">
-        </figure>
+        <div class="spa-carousel-container">
+          <button class="carousel-btn carousel-btn-prev" aria-label="Imagem anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <figure class="spa-photo spa-carousel">
+            <img src="images/imagem%202.jpeg" width="1200" height="1600"
+              alt="Detalhe da sala de SPA da Drs da Beleza com vela, toalha e maca" loading="lazy" decoding="async" data-index="0">
+            <img src="images/01.webp" width="1200" height="1600"
+              alt="Banheira com água azul iluminada na Drs da Beleza SPA" loading="lazy" decoding="async" data-index="1">
+            <img src="images/02.webp" width="1200" height="1600"
+              alt="Sala de massagem com macas na Drs da Beleza SPA" loading="lazy" decoding="async" data-index="2">
+            <img src="images/03.webp" width="1200" height="1600"
+              alt="Terraço externo com plantas na Drs da Beleza SPA" loading="lazy" decoding="async" data-index="3">
+            <img src="images/04.webp" width="1200" height="1600"
+              alt="Área de descanso com guarda-chuva na Drs da Beleza SPA" loading="lazy" decoding="async" data-index="4">
+          </figure>
+          <button class="carousel-btn carousel-btn-next" aria-label="Próxima imagem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+            <button class="carousel-dot" data-slide="3" aria-label="Slide 4"></button>
+            <button class="carousel-dot" data-slide="4" aria-label="Slide 5"></button>
+          </div>
+        </div>
         <div>
           <div class="section-header">
             <span class="section-tag">Nosso SPA</span>
@@ -1900,7 +2058,7 @@
     <section class="section offer-section" id="pacotes">
       <div class="wrapper">
         <div class="section-header">
-          <span class="section-tag">Oferta principal</span>
+          <span class="section-tag">Nossos planos</span>
           <h2 class="section-title">Escolha o cuidado que seu corpo está pedindo.</h2>
           <p class="section-desc">Vagas limitadas por dia para manter o atendimento personalizado, cuidadoso e sem
             pressa.</p>
@@ -1956,47 +2114,47 @@
           </article>
 
           <article class="offer-card">
-            <div class="offer-kicker">Limpeza de pele</div>
-            <h3>Limpeza de Pele Prata</h3>
-            <div class="offer-price"><span class="old">De R$ 220,00</span><strong>R$ 175,00</strong></div>
-            <div class="offer-time">60 minutos</div>
-            <p>O primeiro passo para uma pele visivelmente mais limpa e equilibrada.</p>
+            <div class="offer-kicker">Massagem especializada</div>
+            <h3>Massagem com Pedras Quentes</h3>
+            <div class="offer-price"><strong>A partir de R$ 120,00</strong></div>
+            <div class="offer-time">45 a 60 minutos</div>
+            <p>Alívio profundo de tensões musculares com terapia termal.</p>
             <ul class="offer-list">
-              <li>Esfoliação e extração de cravos</li>
-              <li>Alta frequência</li>
-              <li>Máscara de argila verde ou amarela com vitaminas</li>
+              <li>Pedras vulcânicas aquecidas</li>
+              <li>Alívio de tensão muscular</li>
+              <li>Efeito termal relaxante</li>
             </ul>
-            <a class="btn btn-primary btn-block js-whatsapp" data-cta-location="limpeza_prata"
-              href="https://wa.me/5511941492612?text=Ol%C3%A1%2C%20quero%20agendar%20a%20Limpeza%20de%20Pele%20Prata%20da%20Drs%20da%20Beleza."
+            <a class="btn btn-primary btn-block js-whatsapp" data-cta-location="massagem_pedras"
+              href="https://wa.me/5511941492612?text=Ol%C3%A1%2C%20quero%20agendar%20a%20Massagem%20com%20Pedras%20Quentes%20da%20Drs%20da%20Beleza."
               target="_blank" rel="noopener">Quero agendar</a>
           </article>
 
           <article class="offer-card">
-            <div class="offer-kicker">Limpeza de pele</div>
-            <h3>Limpeza de Pele Ouro</h3>
-            <div class="offer-price"><span class="old">De R$ 250,00</span><strong>R$ 200,00</strong></div>
-            <div class="offer-time">1h30</div>
-            <p>Para quem quer o cuidado mais completo para a pele.</p>
+            <div class="offer-kicker">Massagem especializada</div>
+            <h3>Massagem Craniofacial</h3>
+            <div class="offer-price"><strong>A partir de R$ 140,00</strong></div>
+            <div class="offer-time">50 a 60 minutos</div>
+            <p>Relaxamento de cabeça, rosto e pescoço com técnicas especializadas.</p>
             <ul class="offer-list">
-              <li>Tudo da versão Prata</li>
-              <li>Peeling de diamante</li>
-              <li>Máscara de ouro com aplicação de vitaminas</li>
+              <li>Massagem de crânio e face</li>
+              <li>Alívio de enxaquecas</li>
+              <li>Rejuvenescimento facial</li>
             </ul>
-            <a class="btn btn-primary btn-block js-whatsapp" data-cta-location="limpeza_ouro"
-              href="https://wa.me/5511941492612?text=Ol%C3%A1%2C%20quero%20agendar%20a%20Limpeza%20de%20Pele%20Ouro%20da%20Drs%20da%20Beleza."
+            <a class="btn btn-primary btn-block js-whatsapp" data-cta-location="massagem_craniofacial"
+              href="https://wa.me/5511941492612?text=Ol%C3%A1%2C%20quero%20agendar%20a%20Massagem%20Craniofacial%20da%20Drs%20da%20Beleza."
               target="_blank" rel="noopener">Quero agendar</a>
           </article>
 
           <article class="offer-card">
             <div class="offer-kicker">Também disponível</div>
-            <h3>Massagens e escalda pés</h3>
+            <h3>Escalda Pés e Massagens</h3>
             <div class="offer-price"><strong>A partir de R$ 90,00</strong></div>
             <div class="offer-time">20 a 80 minutos</div>
             <p>Opções rápidas ou completas para quem precisa encaixar uma pausa na agenda.</p>
             <ul class="offer-list">
-              <li>Escalda pés</li>
+              <li>Escalda pés com aromaterapia</li>
               <li>Massagem relaxante</li>
-              <li>Massagem craniofacial ou pedras quentes</li>
+              <li>Spa dos pés completo</li>
             </ul>
             <a class="btn btn-primary btn-block js-whatsapp" data-cta-location="massagens_avulsas"
               href="https://wa.me/5511941492612?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20as%20massagens%20e%20SPA%20da%20Drs%20da%20Beleza."
@@ -2267,6 +2425,54 @@
         item.classList.toggle('is-open');
       });
     });
+
+    (function () {
+      var carousel = document.querySelector('.spa-carousel');
+      var prevBtn = document.querySelector('.carousel-btn-prev');
+      var nextBtn = document.querySelector('.carousel-btn-next');
+      var dots = document.querySelectorAll('.carousel-dot');
+
+      if (!carousel) return;
+
+      var currentSlide = 0;
+      var totalSlides = carousel.querySelectorAll('img').length;
+
+      function showSlide(n) {
+        currentSlide = (n + totalSlides) % totalSlides;
+
+        carousel.querySelectorAll('img').forEach(function (img) {
+          img.style.opacity = '0';
+        });
+
+        carousel.querySelectorAll('img')[currentSlide].style.opacity = '1';
+
+        dots.forEach(function (dot) {
+          dot.classList.remove('active');
+        });
+        if (dots[currentSlide]) {
+          dots[currentSlide].classList.add('active');
+        }
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          showSlide(currentSlide - 1);
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          showSlide(currentSlide + 1);
+        });
+      }
+
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          var slideIndex = parseInt(this.getAttribute('data-slide'));
+          showSlide(slideIndex);
+        });
+      });
+    })();
 
     (function () {
       var nav = document.querySelector('.top-nav');
