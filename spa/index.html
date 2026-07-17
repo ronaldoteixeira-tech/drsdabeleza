@@ -640,8 +640,15 @@
       color: var(--brown-dark);
     }
 
+    .pause-wrap {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+
     .pause-panel {
-      max-width: 860px;
+      max-width: 540px;
     }
 
     .pause-section .section-tag {
@@ -650,15 +657,15 @@
 
     .pause-section .section-title {
       color: var(--brown-dark);
-      max-width: 740px;
+      max-width: 480px;
     }
 
     .pause-text {
       display: grid;
       gap: 0.75rem;
-      max-width: 760px;
+      max-width: 520px;
       color: rgba(61, 43, 26, 0.76);
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       line-height: 1.75;
     }
 
@@ -744,7 +751,9 @@
 
     /* ===================== EXPERIENCE ===================== */
     .experience {
-      background: var(--olive);
+      background:
+        linear-gradient(135deg, rgba(139, 101, 32, 0.92), rgba(61, 43, 26, 0.94)),
+        url('images/imagem%201.jpeg') center / cover no-repeat;
       color: var(--white);
       overflow: hidden;
     }
@@ -940,6 +949,84 @@
     .spa-copy {
       display: grid;
       gap: 1rem;
+    }
+
+    /* ===================== VIDEO ===================== */
+    .video-frame {
+      position: relative;
+      justify-self: end;
+      width: min(100%, 360px);
+    }
+
+    .video-frame::before {
+      content: '';
+      position: absolute;
+      inset: 7% -10% -6%;
+      background: radial-gradient(circle, rgba(196, 149, 42, 0.2), transparent 68%);
+      filter: blur(16px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .video-frame .video-player {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: var(--espresso);
+      box-shadow: 0 28px 70px rgba(61, 43, 26, 0.18);
+      border: 1px solid rgba(196, 149, 42, 0.16);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .video-frame .video-player video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: var(--espresso);
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(30, 18, 8, 0.7) 0%, rgba(60, 40, 20, 0.5) 100%);
+      transition: opacity 0.5s ease;
+    }
+
+    .video-placeholder.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .video-play-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .video-player:hover .video-play-btn {
+      transform: scale(1.08);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .video-play-btn svg {
+      width: 48px;
+      height: 48px;
+      fill: var(--white);
+      margin-left: 4px;
     }
 
     .mini-card {
@@ -1824,6 +1911,26 @@
         width: 24px;
       }
 
+      .pause-wrap {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .video-frame {
+        justify-self: center;
+      }
+
+      .video-play-btn {
+        width: 60px;
+        height: 60px;
+      }
+
+      .video-play-btn svg {
+        width: 36px;
+        height: 36px;
+        margin-left: 2px;
+      }
+
       .top-nav .nav-cta {
         padding: 0.58rem 0.78rem;
         font-size: 0.62rem;
@@ -1949,15 +2056,31 @@
     </section>
 
     <section class="section pause-section" id="pausa">
-      <div class="wrapper pause-panel">
-        <div class="section-header">
-          <span class="section-tag">Pausa de verdade</span>
-          <h2 class="section-title">Isso não é frescura. É o seu corpo pedindo cuidado.</h2>
-        </div>
-        <div class="pause-text">
-          <p>Você sente o corpo pesado antes mesmo de o dia começar. A agenda lotada, as noites mal dormidas, a tensão
-            que gruda no pescoço e nos ombros e não sai nem no fim de semana.</p>
-          <p>Você não precisa esperar até "não aguentar mais" para se dar esse cuidado.</p>
+      <div class="wrapper">
+        <div class="pause-wrap">
+          <div class="pause-panel">
+            <div class="section-header">
+              <span class="section-tag">Pausa de verdade</span>
+              <h2 class="section-title">Isso não é frescura. É o seu corpo pedindo cuidado.</h2>
+            </div>
+            <div class="pause-text">
+              <p>Você sente o corpo pesado antes mesmo de o dia começar. A agenda lotada, as noites mal dormidas, a tensão
+                que gruda no pescoço e nos ombros e não sai nem no fim de semana.</p>
+              <p>Você não precisa esperar até "não aguentar mais" para se dar esse cuidado.</p>
+            </div>
+          </div>
+          <div class="video-frame">
+            <div class="video-player">
+              <video preload="metadata" playsinline poster="video/capa-spa.png">
+                <source src="video/video-spa.mp4" type="video/mp4">
+              </video>
+              <div class="video-placeholder">
+                <div class="video-play-btn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -2050,6 +2173,12 @@
                 <h3>Limpeza de pele</h3>
               </div>
             </article>
+            <article class="mini-card">
+              <div class="mini-card-icon">✦</div>
+              <div>
+                <h3>Roof top aconchegante</h3>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -2116,8 +2245,8 @@
           <article class="offer-card">
             <div class="offer-kicker">Massagem especializada</div>
             <h3>Massagem com Pedras Quentes</h3>
-            <div class="offer-price"><strong>A partir de R$ 120,00</strong></div>
-            <div class="offer-time">45 a 60 minutos</div>
+            <div class="offer-price"><span class="old">De</span> <strong>R$ 210,00</strong></div>
+            <div class="offer-time">Aproximadamente 60 minutos</div>
             <p>Alívio profundo de tensões musculares com terapia termal.</p>
             <ul class="offer-list">
               <li>Pedras vulcânicas aquecidas</li>
@@ -2132,8 +2261,8 @@
           <article class="offer-card">
             <div class="offer-kicker">Massagem especializada</div>
             <h3>Massagem Craniofacial</h3>
-            <div class="offer-price"><strong>A partir de R$ 140,00</strong></div>
-            <div class="offer-time">50 a 60 minutos</div>
+            <div class="offer-price"><strong>R$ 90,00</strong></div>
+            <div class="offer-time">30 minutos</div>
             <p>Relaxamento de cabeça, rosto e pescoço com técnicas especializadas.</p>
             <ul class="offer-list">
               <li>Massagem de crânio e face</li>
@@ -2492,6 +2621,20 @@
           ticking = true;
         }
       }, { passive: true });
+    })();
+
+    (function () {
+      var player = document.querySelector('.video-player');
+      if (!player) return;
+      var video = player.querySelector('video');
+      var placeholder = player.querySelector('.video-placeholder');
+
+      placeholder.addEventListener('click', function() { video.play(); });
+      video.addEventListener('click', function() {
+        if (video.paused) { video.play(); } else { video.pause(); }
+      });
+      video.addEventListener('play', function() { placeholder.classList.add('is-hidden'); });
+      video.addEventListener('pause', function() { placeholder.classList.remove('is-hidden'); });
     })();
   </script>
 </body>
