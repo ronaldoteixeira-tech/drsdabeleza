@@ -14,7 +14,7 @@
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limpeza de Pele no Tatuapé | Drs da Beleza — a partir de R$ 175</title>
+  <title>Limpeza de Pele no Tatuapé | Drs da Beleza, a partir de R$ 175</title>
   <meta name="description"
     content="Limpeza de pele profissional no Tatuapé com extração, peeling de diamante e máscaras nutritivas. Protocolo completo sem cravos e oleosidade. Agende no WhatsApp.">
   <meta name="robots" content="index, follow">
@@ -23,12 +23,12 @@
   <meta property="og:title" content="Limpeza de Pele no Tatuapé | Drs da Beleza">
   <meta property="og:description"
     content="Extração de cravos, peeling de diamante e máscaras em um protocolo completo. Pele limpa, renovada e sem cravos.">
-  <meta property="og:image" content="images/hero%20pc.png">
+  <meta property="og:image" content="imagens/hero.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preload" as="image" href="images/hero%20pc.png" media="(min-width: 681px)">
-  <link rel="preload" as="image" href="images/hero%20mobile.png" media="(max-width: 680px)">
+  <link rel="preload" as="image" href="imagens/hero.png" media="(min-width: 681px)">
+  <link rel="preload" as="image" href="imagens/hero-mobile.png" media="(max-width: 680px)">
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
     rel="stylesheet">
@@ -379,7 +379,7 @@
       padding: 7rem 0 4rem;
       background:
         linear-gradient(90deg, rgba(250, 246, 239, 0.96) 0%, rgba(250, 246, 239, 0.86) 34%, rgba(250, 246, 239, 0.28) 58%, rgba(250, 246, 239, 0.03) 100%),
-        url('images/hero%20pc.png') center center / cover no-repeat;
+        url('imagens/hero.png') center center / cover no-repeat;
       background-color: var(--cream);
       box-shadow: inset 0 -90px 120px -50px rgba(120, 84, 22, 0.32), inset 0 0 150px 10px rgba(150, 108, 32, 0.12);
       overflow: hidden;
@@ -583,13 +583,14 @@
     .benefit-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.1rem;
+      gap: 1.5rem;
+      padding-top: 4rem;
     }
 
     .benefit-card {
       position: relative;
-      min-height: 174px;
-      padding: 1.28rem 1.35rem 1.22rem;
+      min-height: 210px;
+      padding: 1.5rem 1.6rem 1.4rem;
       border-radius: 26px;
       background:
         linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.82));
@@ -799,7 +800,7 @@
     .offers-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
+      gap: 1.5rem;
       align-items: stretch;
     }
 
@@ -808,7 +809,7 @@
       display: flex;
       flex-direction: column;
       min-height: 0;
-      padding: 1.12rem 1.18rem;
+      padding: 1.4rem 1.5rem;
       border-radius: var(--radius-xl);
       background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(196, 149, 42, 0.18);
@@ -911,7 +912,7 @@
     }
 
     .offer-list {
-      margin: 0 0 0.75rem;
+      margin: 0 0 1.2rem;
       padding: 0;
       list-style: none;
       display: grid;
@@ -942,7 +943,7 @@
     }
 
     .offer-card .btn {
-      margin-top: 0.35rem;
+      margin-top: auto;
     }
 
     .offer-card.featured .btn-primary {
@@ -1378,6 +1379,7 @@
 
     .pause-panel {
       max-width: 540px;
+      margin-top: -12rem;
     }
 
     .pause-section .section-tag {
@@ -1398,7 +1400,32 @@
       line-height: 1.75;
     }
 
+    .pause-highlight {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 1.6rem;
+      padding: 1rem;
+      border-radius: var(--radius-lg);
+      background: var(--sage-light);
+      color: var(--brown-dark);
+    }
+
+    .pause-highlight svg {
+      width: 26px;
+      height: 26px;
+      color: var(--olive);
+    }
+
+    .pause-highlight p {
+      font-size: 0.88rem;
+      color: rgba(61, 43, 26, 0.78);
+      line-height: 1.62;
+    }
+
     @keyframes shinery {
+
       0%,
       100% {
         left: -10%;
@@ -1519,7 +1546,7 @@
             rgba(250, 246, 239, 0.72) 54%,
             rgba(250, 246, 239, 0.95) 62%,
             rgba(250, 246, 239, 1.00) 70%),
-          url('images/hero%20mobile.png') center top / cover no-repeat;
+          url('imagens/hero-mobile.png') center top / cover no-repeat;
         background-color: var(--cream);
         padding-top: 62vw;
       }
@@ -1552,6 +1579,7 @@
 
       .benefit-grid {
         grid-template-columns: 1fr;
+        padding-top: 0;
       }
 
       .clinic-gallery,
@@ -1626,14 +1654,15 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrapper hero-grid">
         <div class="hero-copy">
-          <span class="hero-eyebrow">✦ Limpeza de Pele — Drs da Beleza</span>
+          <span class="hero-eyebrow">✦ Limpeza de Pele, Drs da Beleza</span>
           <h1 class="hero-title" id="hero-title">
             <span class="hero-preline">Limpeza de pele profissional no Tatuapé</span>
             <span class="hero-highlight">pele limpa, renovada</span>
             <span class="hero-postline">e sem cravos</span>
           </h1>
           <p class="hero-sub">
-            Extração, peeling de diamante e máscaras nutritivas em um protocolo completo de limpeza — ao lado do Parque do Ceret.
+            Extração, peeling de diamante e máscaras nutritivas em um protocolo completo de limpeza, ao lado do Parque
+            do Ceret.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary js-whatsapp" data-cta-location="hero"
@@ -1642,7 +1671,7 @@
                 class="mobile-only">Agendar limpeza de pele</span></a>
             <a class="btn btn-outline" href="#planos">Ver planos</a>
           </div>
-          <p class="hero-credential">★ 5.0 no Google — 130+ avaliações</p>
+          <p class="hero-credential">★ 5.0 no Google, 130+ avaliações</p>
         </div>
       </div>
     </section>
@@ -1677,11 +1706,14 @@
             <span class="section-tag">Sua pele está pedindo ajuda</span>
             <h2 class="section-title">Cravos, oleosidade e aquele aspecto opaco que o skincare de casa não resolve.</h2>
             <p class="section-desc">
-              Você lava, esfolia, testa produto novo — e os cravos continuam ali. A oleosidade volta antes do fim do dia, os poros parecem cada vez mais visíveis e a maquiagem já não disfarça.
+              Você lava, esfolia, testa produto novo, e os cravos continuam ali. A oleosidade volta antes do fim do dia,
+              os poros parecem cada vez mais visíveis e a maquiagem já não disfarça.
               <br><br>
-              Não é falta de cuidado seu. Extração segura, peeling e ativos profissionais são coisas que nenhum produto de prateleira substitui.
+              Não é falta de cuidado seu. Extração segura, peeling e ativos profissionais são coisas que nenhum produto
+              de prateleira substitui.
               <br><br>
-              Uma limpeza de pele profissional feita por quem entende devolve o que sua rotina sozinha não consegue: pele limpa de verdade, uniforme e saudável.
+              Uma limpeza de pele profissional feita por quem entende devolve o que sua rotina sozinha não consegue:
+              pele limpa de verdade, uniforme e saudável.
             </p>
           </div>
         </div>
@@ -1695,7 +1727,8 @@
           <article class="benefit-card">
             <div class="benefit-icon">02</div>
             <h3>Oleosidade sob controle</h3>
-            <p>O peeling de diamante renova a superfície da pele, uniformiza a textura e ajuda a controlar o brilho excessivo.</p>
+            <p>O peeling de diamante renova a superfície da pele, uniformiza a textura e ajuda a controlar o brilho
+              excessivo.</p>
           </article>
           <article class="benefit-card">
             <div class="benefit-icon">03</div>
@@ -1705,7 +1738,8 @@
           <article class="benefit-card">
             <div class="benefit-icon">04</div>
             <h3>Finalização que protege</h3>
-            <p>A alta frequência tem ação calmante e bactericida — menos vermelhidão e menor risco de inflamação pós-extração.</p>
+            <p>A alta frequência tem ação calmante e bactericida, menos vermelhidão e menor risco de inflamação
+              pós-extração.</p>
           </article>
         </div>
       </div>
@@ -1723,7 +1757,7 @@
           <article class="step-card">
             <div class="step-number">01</div>
             <h3>Escolha seu plano</h3>
-            <p>Ouro ou Prata — veja abaixo qual combina com o momento da sua pele.</p>
+            <p>Ouro ou Prata, veja abaixo qual combina com o momento da sua pele.</p>
           </article>
           <article class="step-card">
             <div class="step-number">02</div>
@@ -1749,7 +1783,19 @@
               <h2 class="section-title">Pele limpa desde a primeira sessão.</h2>
             </div>
             <div class="pause-text">
-              <p>Conheça o protocolo da Drs da Beleza em limpeza de pele profissional. Veja como o processo funciona, passo a passo, e os resultados que você pode esperar ainda na primeira sessão.</p>
+              <p>Conheça o protocolo da Drs da Beleza em limpeza de pele profissional. Veja como o processo funciona,
+                passo a passo, e os resultados que você pode esperar ainda na primeira sessão.</p>
+            </div>
+            <div class="pause-highlight">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+              </svg>
+              <p>Seu rosto não precisa de mais produtos, precisa respirar. O acúmulo de impurezas sufoca as células e
+                acelera o envelhecimento precoce todos os dias. O que você faz em casa não alcança o que está abaixo da
+                superfície. Esse "reset" profissional é o cuidado urgente que sua pele implora para recuperar o viço.
+                Agende seu horário agora e sinta a transformação imediata.</p>
             </div>
           </div>
           <div class="video-frame">
@@ -1785,11 +1831,11 @@
             <h3>Limpeza de Pele Ouro</h3>
             <div class="offer-price"><span class="old">De R$ 250,00</span> <strong>Por R$ 200,00</strong></div>
             <div class="offer-time">1h30</div>
-            <p>Para quem quer o tratamento mais completo — limpeza profunda com finalização premium.</p>
+            <p>Para quem quer o tratamento mais completo, limpeza profunda com finalização premium.</p>
             <ul class="offer-list">
               <li>Esfoliação</li>
               <li>Extração de cravos e impurezas</li>
-              <li>Peeling de diamante — controla a oleosidade e uniformiza a pele</li>
+              <li>Peeling de diamante, controla a oleosidade e uniformiza a pele</li>
               <li>Máscara de ouro</li>
               <li>Aplicação de vitaminas</li>
               <li>Alta frequência</li>
@@ -1817,7 +1863,8 @@
           </article>
         </div>
 
-        <p class="offer-note">Agendamento rápido pelo WhatsApp, sem pagamento antecipado. Valores promocionais por tempo limitado.</p>
+        <p class="offer-note">Agendamento rápido pelo WhatsApp, sem pagamento antecipado. Valores promocionais por tempo
+          limitado.</p>
       </div>
     </section>
 
@@ -1941,7 +1988,7 @@
               quem vem da zona leste, Anália Franco e regiões próximas.</p>
             <ul class="location-list">
               <li><span>✦</span> Seg-Sex<br>08h - 20h</li>
-              <li><span>✦</span> Sábado<br>08h - 14h</li>
+              <li><span>✦</span> Sábado<br>08h - 20h</li>
               <li><span>✦</span> Ao lado do Parque do Ceret</li>
               <li><span>✦</span> Jardim Analia Franco</li>
             </ul>
@@ -1963,23 +2010,26 @@
         <div class="faq-list">
           <article class="faq-item is-open">
             <button class="faq-question" type="button">A extração dói? <span>+</span></button>
-            <div class="faq-answer">A extração é feita com técnica profissional e a pele é preparada antes com esfoliação e emoliência, o que reduz muito o desconforto. A alta frequência no final acalma a pele.</div>
+            <div class="faq-answer">A extração é feita com técnica profissional e a pele é preparada antes com
+              esfoliação e emoliência, o que reduz muito o desconforto. A alta frequência no final acalma a pele.</div>
           </article>
           <article class="faq-item">
             <button class="faq-question" type="button">Posso me maquiar depois do procedimento? <span>+</span></button>
-            <div class="faq-answer">O ideal é deixar a pele respirar por pelo menos 24 horas. Nossa equipe orienta os cuidados pós-procedimento no atendimento.</div>
+            <div class="faq-answer">O ideal é deixar a pele respirar por pelo menos 24 horas. Nossa equipe orienta os
+              cuidados pós-procedimento no atendimento.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" type="button">Qual a diferença entre os planos Ouro e Prata? <span>+</span></button>
-            <div class="faq-answer">O Prata é a limpeza essencial (60 min): esfoliação, extração, alta frequência e máscara de argila. O Ouro (1h30) acrescenta peeling de diamante, máscara de ouro e aplicação de vitaminas — indicado para quem quer renovação mais profunda.</div>
+            <button class="faq-question" type="button">Qual a diferença entre os planos Ouro e Prata?
+              <span>+</span></button>
+            <div class="faq-answer">O Prata é a limpeza essencial (60 min): esfoliação, extração, alta frequência e
+              máscara de argila. O Ouro (1h30) acrescenta peeling de diamante, máscara de ouro e aplicação de vitaminas,
+              indicado para quem quer renovação mais profunda.</div>
           </article>
           <article class="faq-item">
-            <button class="faq-question" type="button">Com que frequência devo fazer limpeza de pele? <span>+</span></button>
-            <div class="faq-answer">Em geral, a cada 30 a 45 dias, mas varia conforme o tipo de pele. Na avaliação, indicamos a frequência ideal para você.</div>
-          </article>
-          <article class="faq-item">
-            <button class="faq-question" type="button">Funciona aos sábados? <span>+</span></button>
-            <div class="faq-answer">Sim. Atendemos de segunda a sexta das 8h às 20h e aos sábados das 8h às 14h.</div>
+            <button class="faq-question" type="button">Com que frequência devo fazer limpeza de pele?
+              <span>+</span></button>
+            <div class="faq-answer">Em geral, a cada 30 a 45 dias, mas varia conforme o tipo de pele. Na avaliação,
+              indicamos a frequência ideal para você.</div>
           </article>
         </div>
       </div>
@@ -1990,7 +2040,8 @@
       <div class="wrapper">
         <span class="section-tag">Agende seu horário</span>
         <h2>Sua pele não precisa esperar mais uma promessa de skincare.</h2>
-        <p>Agende sua limpeza de pele com condição promocional e sinta a diferença de um protocolo profissional completo — já na primeira sessão.</p>
+        <p>Agende sua limpeza de pele com condição promocional e sinta a diferença de um protocolo profissional
+          completo, já na primeira sessão.</p>
         <a class="btn btn-primary js-whatsapp" data-cta-location="cta_final"
           href="https://wa.me/5511941492612?text=Ol%C3%A1%2C%20vim%20da%20LP%20de%20Limpeza%20de%20Pele%20e%20quero%20garantir%20meu%20hor%C3%A1rio%20na%20Drs%20da%20Beleza."
           target="_blank" rel="noopener">Agendar agora pelo WhatsApp</a>
@@ -2035,7 +2086,7 @@
         <div class="footer-heading">Horários</div>
         <ul class="footer-list">
           <li>Seg-Sex: 08h - 20h</li>
-          <li>Sábado: 08h - 14h</li>
+          <li>Sábado: 08h - 20h</li>
           <li>R. Eleonora Cintra, 468 - Jardim Analia Franco, São Paulo - SP, 03337-000</li>
         </ul>
         <hr class="footer-rule">
