@@ -14,6 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>Lavieen — Drs da Beleza | Tatuapé</title>
   <meta name="description"
     content="Tratamento a laser Lavieen para pele e cabelos no Tatuapé. Manchas, melasma, rejuvenescimento facial, queda capilar e fortalecimento dos fios.">
+  <link rel="canonical" href="https://www.drsdabeleza.com.br/lavieen/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -1303,8 +1304,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* ===================== GALERIA ===================== */
     .gallery-carousel {
       overflow: hidden;
-      mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+      padding: 0.25rem 0 0.8rem;
+      mask-image: linear-gradient(to right, transparent 0, black 1.5%, black 98.5%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0, black 1.5%, black 98.5%, transparent 100%);
     }
 
     .gallery-track {
@@ -1318,6 +1320,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       animation-play-state: paused;
     }
 
+    .gallery-carousel:focus-within .gallery-track {
+      animation-play-state: paused;
+    }
+
     .gallery-item {
       position: relative;
       border-radius: var(--radius-lg);
@@ -1326,6 +1332,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       aspect-ratio: 366 / 599;
       cursor: pointer;
       flex-shrink: 0;
+      border: 0;
+      padding: 0;
+      background: var(--sand);
+      color: inherit;
+      font: inherit;
+      appearance: none;
       transition: all var(--transition-base);
     }
 
@@ -2130,7 +2142,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
             </div>
             <video class="video-element" preload="none" playsinline loop poster="imagens/capa-video.png"
-              data-src="video/levieen-video.mp4"></video>
+              data-src="video/lavieen-video.mp4"></video>
           </div>
           <p class="video-caption">Conheça o protocolo Lavieen personalizado e entenda como ele transforma a pele e os
             cabelos.</p>
@@ -2270,44 +2282,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="section-tag">Resultados reais</span>
         <h2 class="section-title">Antes e Depois</h2>
         <p class="section-desc" style="margin: 0.6rem auto 0; max-width: 540px;">
-          Resultados faciais e capilares com o protocolo Lavieen personalizado.
+          Resultados reais em diferentes áreas com o protocolo Lavieen personalizado.
         </p>
       </div>
       <div class="gallery-carousel" style="margin-top: 2rem;">
         <div class="gallery-track">
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="imagens/antes-e-depois/IMG_8125.JPG.jpeg" alt="Antes e Depois" loading="lazy">
-            <div class="gallery-overlay">Antes &amp; Depois</div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="imagens/antes-e-depois/IMG_8126.JPG.jpeg" alt="Antes e Depois" loading="lazy">
-            <div class="gallery-overlay">Antes &amp; Depois</div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="imagens/antes-e-depois/IMG_8127.JPG.jpeg" alt="Antes e Depois" loading="lazy">
-            <div class="gallery-overlay">Antes &amp; Depois</div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="imagens/antes-e-depois/IMG_8128.JPG.jpeg" alt="Antes e Depois" loading="lazy">
-            <div class="gallery-overlay">Antes &amp; Depois</div>
-          </div>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 1 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-1.jpg"
+              alt="Antes e depois de tratamento Lavieen na região abdominal" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 2 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-2.jpg"
+              alt="Antes e depois de tratamento Lavieen no rosto e pescoço" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 3 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-3.jpg"
+              alt="Antes e depois de tratamento Lavieen para flacidez abdominal" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 4 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-4.jpg"
+              alt="Antes e depois de tratamento Lavieen no contorno facial" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 6 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-6.jpg"
+              alt="Antes e depois de tratamento Lavieen no rosto e pescoço de perfil" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
           <!-- Duplicate for infinite scroll -->
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="imagens/antes-e-depois/IMG_8125.JPG.jpeg" alt="Antes e Depois" loading="lazy">
-            <div class="gallery-overlay">Antes &amp; Depois</div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="imagens/antes-e-depois/IMG_8126.JPG.jpeg" alt="Antes e Depois" loading="lazy">
-            <div class="gallery-overlay">Antes &amp; Depois</div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="imagens/antes-e-depois/IMG_8127.JPG.jpeg" alt="Antes e Depois" loading="lazy">
-            <div class="gallery-overlay">Antes &amp; Depois</div>
-          </div>
-          <div class="gallery-item" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="imagens/antes-e-depois/IMG_8128.JPG.jpeg" alt="Antes e Depois" loading="lazy">
-            <div class="gallery-overlay">Antes &amp; Depois</div>
-          </div>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 1 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-1.jpg"
+              alt="Antes e depois de tratamento Lavieen na região abdominal" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 2 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-2.jpg"
+              alt="Antes e depois de tratamento Lavieen no rosto e pescoço" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 3 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-3.jpg"
+              alt="Antes e depois de tratamento Lavieen para flacidez abdominal" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 4 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-4.jpg"
+              alt="Antes e depois de tratamento Lavieen no contorno facial" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
+          <button type="button" class="gallery-item" onclick="openLightbox(this.querySelector('img').src)"
+            aria-label="Ampliar resultado 6 do tratamento Lavieen">
+            <img src="imagens/antes-e-depois/lavieen-resultado-6.jpg"
+              alt="Antes e depois de tratamento Lavieen no rosto e pescoço de perfil" loading="lazy">
+            <span class="gallery-overlay">Antes &amp; Depois</span>
+          </button>
         </div>
       </div>
     </div>
