@@ -141,13 +141,29 @@
 
   if (body.getAttribute('data-service') === 'gordura-localizada') {
     var variants = {
-      crio: 'Criolipólise para a gordura que não sai nem com dieta e treino',
-      drenagem: 'Drenagem para desinchar e definir o contorno do corpo',
-      gordura: 'Aquela gordura localizada que não sai nem com dieta e treino'
+      crio: {
+        pre: 'Criolipólise para a gordura',
+        highlight: 'que não sai',
+        post: 'nem com dieta e treino'
+      },
+      drenagem: {
+        pre: 'Drenagem para',
+        highlight: 'desinchar',
+        post: 'e definir o contorno do corpo'
+      },
+      gordura: {
+        pre: 'Aquela gordura localizada',
+        highlight: 'que não sai',
+        post: 'nem com dieta e treino'
+      }
     };
     var variant = params.get('p') || 'gordura';
     var dynamicTitle = document.querySelector('[data-dynamic-title]');
-    if (dynamicTitle && variants[variant]) dynamicTitle.textContent = variants[variant];
+    if (dynamicTitle && variants[variant]) {
+      dynamicTitle.querySelector('[data-title-pre]').textContent = variants[variant].pre;
+      dynamicTitle.querySelector('[data-title-highlight]').textContent = variants[variant].highlight;
+      dynamicTitle.querySelector('[data-title-post]').textContent = variants[variant].post;
+    }
   }
 
   if (window.LP_CONFIG && window.LP_CONFIG.packages) {
